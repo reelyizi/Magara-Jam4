@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Vector3 velocity;
 
-    [SerializeField] GameObject VFX;
-    [SerializeField] float rotationSpeed;
+    [SerializeField] private GameObject VFX;
+    [SerializeField] private float rotationSpeed;
 
     private CharacterController characterController;
     #endregion
@@ -70,10 +70,15 @@ public class PlayerMovement : MonoBehaviour
         //velocity.y += gravity * Time.deltaTime;
         //characterController.Move(velocity * Time.deltaTime);
     }
-
+    
     private void VFXRotation()
     {
-        VFX.transform.rotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+        if (moveDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            targetRotation = Quaternion.RotateTowards(VFX.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            VFX.transform.rotation = targetRotation;           
+        }            
     }
 
     private void Walk()
