@@ -313,7 +313,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Strain First Attack 1
-  m_Speed: 1
+  m_Speed: 1.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8606193065104625679}
@@ -423,7 +423,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Strain Attack 0
-  m_Speed: 1
+  m_Speed: 1.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2607861114906557240}
@@ -570,7 +570,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Strain 0
-  m_Speed: 1
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7332182023066972420}
@@ -923,7 +923,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Finish Attack
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3586553447128034585}
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   particle:
   - {fileID: 1819066416490906, guid: 992ab666e5f2f5c4cb8f80f5e7b2152f, type: 3}
   delay:
-  - 0.15
+  - 0.1
   positionType: 01000000
 --- !u!1102 &3720004456239365767
 AnimatorState:
@@ -1458,9 +1458,9 @@ MonoBehaviour:
   - {fileID: 1107296871017770, guid: 3ff59f3066a1bc6449cfe3a4937f4902, type: 3}
   - {fileID: 1115641076847360, guid: 83ed410af8ceaf047952ac20a5bcfea4, type: 3}
   delay:
-  - 0.18
-  - 0.34
-  - 0.8
+  - 0.135
+  - 0.26
+  - 0.6
   positionType: 010000000100000002000000
 --- !u!114 &6544589890096180391
 MonoBehaviour:
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   particle:
   - {fileID: 1107296871017770, guid: 3ff59f3066a1bc6449cfe3a4937f4902, type: 3}
   delay:
-  - 0.2
+  - 0.16
   positionType: 01000000
 --- !u!1101 &8544439106627396102
 AnimatorStateTransition:
