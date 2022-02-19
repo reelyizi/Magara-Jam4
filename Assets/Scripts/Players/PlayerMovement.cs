@@ -33,9 +33,15 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
+    private void OnDisable()
+    {
+        moveDirection = Vector3.zero;
+        offset = Vector3.zero;
+    }
+
     private void Move()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -44,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Walkable"))
                     target = hit.point;
 
-                Debug.Log(hit.collider.gameObject.name);
                 offset = target - transform.position;
                 moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
             }
@@ -54,24 +59,18 @@ public class PlayerMovement : MonoBehaviour
         VFXRotation();
 
         // Walk
-        if (offset.magnitude > .1f)
-        {
-            animator.SetBool("Movement", true);
+        if (offset.magnitude > .2f)
+        {           
             Walk();
+
+            characterController.Move((moveDirection * moveSpeed) * Time.deltaTime);
+            transform.position = transform.position - (Vector3.up * transform.position.y);
+            offset = target - transform.position;
         }
         // Idle
         else
         {
-            animator.SetBool("Movement", false);
             Idle();
-        }
-
-        Debug.Log(offset.magnitude);
-        if (offset.magnitude > .1f)
-        {
-            Debug.Log(offset.magnitude);
-            characterController.Move((moveDirection * moveSpeed) * Time.deltaTime);
-            offset = target - transform.position;
         }
     }
 
@@ -88,11 +87,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Walk()
     {
+        animator.SetBool("Movement", true);
         moveSpeed = walkSpeed;
     }
 
     private void Idle()
     {
-
+        animator.SetBool("Movement", false);
     }
 }

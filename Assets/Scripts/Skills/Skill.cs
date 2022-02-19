@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Skill", order = 1)]
 public class Skill : ScriptableObject
 {
+    public int skillType;
+    public int skillLevel;
+
     public List<GameObject> animation;
     public List<float> cooldown;
     public List<float> spawnDuration;
@@ -16,5 +19,6 @@ public class Skill : ScriptableObject
 public enum SkillPositionType
 {
     character,
-    frontCharacter
+    frontCharacter,
+    groundObject
 }
