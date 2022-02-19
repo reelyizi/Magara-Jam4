@@ -27,27 +27,28 @@ public class SkillManager : MonoBehaviour
 
     [SerializeField] private Transform effectPosition;
     [SerializeField] private Transform groundEffectPosition;
+    [SerializeField] private Transform rightHandEffectPosition;
+    [SerializeField] private Transform leftHandEffectPosition;
+    [SerializeField] private Transform head;
+
     private float elapsedTime;
 
     private bool skillFlag;
-    //private Skill cloneSkill = null;
+    private Skill cloneSkill = null;
     private int index = 0;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
         {
+            cloneSkill = skillSlots[0].GetComponent<SkillSlot>().skillObject;
+            StartAnimations();
             GenerateSkill(0);
         }
         else if (Input.GetKeyDown(KeyCode.W) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
         {
-            VFX.transform.parent = null;
-            transform.parent = VFX.transform;
-
-            Animator characterAnimator = VFX.GetComponent<Animator>();
-            characterAnimator.SetTrigger("Skill");
-            characterAnimator.SetInteger("Skill Type", 1);
-            characterAnimator.SetInteger("Skill Level", 1);
+            cloneSkill = skillSlots[1].GetComponent<SkillSlot>().skillObject;
+            StartAnimations();
             GenerateSkill(1);
         }
         else if (Input.GetKeyDown(KeyCode.E) && !skillFlag)
@@ -94,7 +95,6 @@ public class SkillManager : MonoBehaviour
             {
                 for (int i = 0; i < skillDelay.Count; i++)
                 {
-                    Debug.Log("A");
                     skillDelay[i] -= Time.deltaTime;
                     if (skillDelay[i] <= 0)
                     {
@@ -135,8 +135,25 @@ public class SkillManager : MonoBehaviour
             effect = Instantiate(skillParticle[index], effectPosition.position, effectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.groundObject)
             effect = Instantiate(skillParticle[index], groundEffectPosition.position, groundEffectPosition.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.leftHand)
+            effect = Instantiate(skillParticle[index], leftHandEffectPosition.position, leftHandEffectPosition.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.rightHand)
+            effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.head)
+            effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
 
         Destroy(effect, 5f);
+    }
+
+    private void StartAnimations()
+    {
+        VFX.transform.parent = null;
+        transform.parent = VFX.transform;
+
+        Animator characterAnimator = VFX.GetComponent<Animator>();
+        characterAnimator.SetTrigger("Skill");
+        characterAnimator.SetInteger("Skill Type", cloneSkill.skillType);
+        characterAnimator.SetInteger("Skill Level", cloneSkill.skillLevel);
     }
 
     public void SkillReset()
