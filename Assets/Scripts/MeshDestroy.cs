@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MeshDestroy : MonoBehaviour
 {
@@ -13,14 +14,11 @@ public class MeshDestroy : MonoBehaviour
     public int CutCascades = 1;
     public float ExplodeForce = 0;
     public float destroyTime=3;
+    public float lerpSpeed;
     bool isDestroyed=true;
+    List<PartMesh> parts;
+     GameObject parentObject;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -34,9 +32,11 @@ public class MeshDestroy : MonoBehaviour
 
     private void DestroyMesh()
     {
+        parentObject= new GameObject();
+        parentObject.name=this.gameObject.name+"Parent";
         var originalMesh = GetComponent<MeshFilter>().mesh;
         originalMesh.RecalculateBounds();
-        var parts = new List<PartMesh>();
+        parts = new List<PartMesh>();
         var subParts = new List<PartMesh>();
 
         var mainPart = new PartMesh()
@@ -70,22 +70,27 @@ public class MeshDestroy : MonoBehaviour
             parts = new List<PartMesh>(subParts);
             subParts.Clear();
         }
-
+        
         for (var i = 0; i < parts.Count; i++)
         {
             parts[i].MakeGameobject(this);
             parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
-            Destroy(parts[i].GameObject,destroyTime);
+            parts[i].GameObject.transform.parent=parentObject.transform;
+            Destroy(parts[i].GameObject.GetComponent<MeshDestroy>());
         }
-        Destroy(gameObject);
+
+        Invoke("DestroyParts",destroyTime);
+        this.gameObject.SetActive(false);
+        Destroy(gameObject,destroyTime+1);
     }
-    IEnumerator DestroyParts(List<PartMesh> parts)
+    void DestroyParts()
     {
-        yield return new WaitForSeconds(2);
-        for(int i =0;i<parts.Count;i++)
+        for(int i=0;i<parts.Count;i++)
         {
-            Destroy(parts[i].GameObject);
+            Destroy(parts[i].GameObject.GetComponent<MeshCollider>());
         }
+        parentObject.transform.position=Vector3.Lerp(parentObject.transform.position,parentObject.transform.position+new Vector3(0,-2,0),lerpSpeed*Time.deltaTime);
+        Destroy(parentObject,2);
     }
     private PartMesh GenerateMesh(PartMesh original, Plane plane, bool left)
     {
