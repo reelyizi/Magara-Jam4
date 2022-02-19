@@ -22,13 +22,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject effectPosition;
 
     private CharacterController characterController;
-    private NavMeshAgent agent;
     #endregion
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -36,49 +34,27 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    private void OnDisable()
-    {
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
-        target = transform.position - Vector3.up;
-    }
-
-    private void OnEnable()
-    {
-        agent.isStopped = false;
-    }
-
     private void Move()
     {
-        //isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
-
-        //if (isGrounded && velocity.y < 0)
-        //{
-        //    velocity.y = -2f;
-        //}
-
-        //float vertical = Input.GetAxis("Vertical");
-        //float horizontal = Input.GetAxis("Horizontal");
-
-        //moveDirection = new Vector3(horizontal, 0, vertical);
-
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+            if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.collider.gameObject.name);
-                target = hit.point;
-                //offset = target - transform.position;
-                //moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
+                if(hit.collider.gameObject.CompareTag("Walkable"))
+                    target = hit.point;
+
+                Debug.Log(hit.collider.gameObject.name);                
+                offset = target - transform.position;
+                moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
             }
         }
         //Debug.DrawRay(transform.position, transform.position + test - (Vector3.up), Color.yellow);
             
         VFXRotation();
 
-        if (offset.magnitude > .01f)
+        if (offset.magnitude > .1f)
         {
             // Walk
             if (!Input.GetKey(KeyCode.LeftShift))
@@ -97,22 +73,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-        agent.SetDestination(target);
         Debug.Log(offset.magnitude);
-        //if(offset.magnitude > .1f)
-        //{
-        //    //offset = target - transform.position;
-        //    //moveDirection = moveSpeed * moveDirection;
-        //    Debug.Log(moveDirection);
-        //    characterController.Move(moveDirection * Time.deltaTime);
-        //}
-            
-
-        //velocity.y += gravity * Time.deltaTime;
-        //characterController.Move(velocity * Time.deltaTime);
+        if (offset.magnitude > .1f)
+        {
+            Debug.Log(offset.magnitude);
+            characterController.Move((moveDirection * moveSpeed) * Time.deltaTime);
+            offset = target - transform.position;
+        }
     }
-    
+
     private void VFXRotation()
     {
         if (moveDirection != Vector3.zero)

@@ -109,7 +109,7 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 1.9
+    agentClimb: 0
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 758504078}
   m_Layer: 6
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Walkable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1750,6 +1750,11 @@ MonoBehaviour:
   screenShake: 0
   shakeStrength: 0.05
   shakeDuration: 1
+  maxOffset: {x: 0, y: 0, z: 0}
+  minOffset: {x: 0, y: 0, z: 0}
+  zoomModifierY: 0
+  zoomModifierZ: 0
+  rotateSpeed: 0
 --- !u!114 &1767748936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1772,7 +1777,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
@@ -1979,7 +1983,7 @@ CharacterController:
   m_GameObject: {fileID: 2031082586}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -2062,7 +2066,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031082586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.71
   m_Speed: 3.5
