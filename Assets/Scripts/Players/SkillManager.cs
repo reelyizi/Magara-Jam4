@@ -30,6 +30,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private Transform rightHandEffectPosition;
     [SerializeField] private Transform leftHandEffectPosition;
     [SerializeField] private Transform head;
+    [SerializeField] private Transform middleFrontCharacter;
 
     private float elapsedTime;
 
@@ -51,9 +52,11 @@ public class SkillManager : MonoBehaviour
             StartAnimations();
             GenerateSkill(1);
         }
-        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
         {
-            Debug.Log("C");
+            cloneSkill = skillSlots[2].GetComponent<SkillSlot>().skillObject;
+            StartAnimations();
+            GenerateSkill(2);
         }
         else if (Input.GetKeyDown(KeyCode.A) && !skillFlag)
         {
@@ -141,6 +144,8 @@ public class SkillManager : MonoBehaviour
             effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.head)
             effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.middleFrontCharacter)
+            effect = Instantiate(skillParticle[index], middleFrontCharacter.position, middleFrontCharacter.rotation);
 
         Destroy(effect, 5f);
     }

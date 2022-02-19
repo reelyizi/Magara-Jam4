@@ -23,5 +23,6 @@ public enum SkillPositionType
     groundObject,
     leftHand,
     rightHand,
-    head
+    head,
+    middleFrontCharacter
 }
