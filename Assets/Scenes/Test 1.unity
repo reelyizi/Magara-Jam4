@@ -1736,10 +1736,10 @@ MonoBehaviour:
   shakeStrength: 0.05
   shakeDuration: 1
   maxOffset: {x: 0, y: 0, z: 0}
-  minOffset: {x: 0, y: 0, z: 0}
-  zoomModifierY: 0
-  zoomModifierZ: 0
-  rotateSpeed: 0
+  minOffset: {x: 0, y: 5, z: 4}
+  zoomModifierY: 0.6
+  zoomModifierZ: 0.15
+  rotateSpeed: 2.3
 --- !u!114 &1767748936
 MonoBehaviour:
   m_ObjectHideFlags: 0
