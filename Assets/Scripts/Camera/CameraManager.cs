@@ -14,15 +14,19 @@ public class CameraManager : MonoBehaviour
     private Vector3 shake = Vector3.zero;
     private float elapsedTime = 0f;
 
+    [SerializeField] private Vector3 maxOffset, minOffset;
+    [SerializeField] private float zoomModifierY,zoomModifierZ, rotateSpeed;
+
     void Start()
     {
-        offset = transform.position - target.position;    
+        offset = transform.position - target.position;
     }
 
     void Update()
     {
+        HandleZoom();
         CameraFollow();
-        if(screenShake)
+        if (screenShake)
             GenerateShake();
     }
 
@@ -32,8 +36,8 @@ public class CameraManager : MonoBehaviour
     }
 
     private void GenerateShake()
-    {        
-        if(elapsedTime < shakeDuration)
+    {
+        if (elapsedTime < shakeDuration)
         {
             elapsedTime += Time.deltaTime;
             transform.position += Random.insideUnitSphere * shakeStrength;
@@ -42,6 +46,24 @@ public class CameraManager : MonoBehaviour
         {
             screenShake = !screenShake;
             elapsedTime = 0f;
+        }
+    }
+    private void HandleZoom()
+    {
+        //transform.LookAt(target.position);
+        if (Input.GetAxis("Mouse ScrollWheel")>0)
+        {
+            //Zoom in
+            transform.position += new Vector3(0, -zoomModifierY, zoomModifierZ);
+            transform.Rotate(-rotateSpeed,0,0);
+
+        }
+        if (Input.GetAxis("Mouse ScrollWheel")<0)
+        {
+            //Zoom out
+            transform.position+= new Vector3(0, zoomModifierY, -zoomModifierZ);
+            transform.Rotate(rotateSpeed,0,0);
+
         }
     }
 }
