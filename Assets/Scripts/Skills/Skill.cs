@@ -24,5 +24,7 @@ public enum SkillPositionType
     leftHand,
     rightHand,
     head,
-    middleFrontCharacter
+    middleFrontCharacter,
+    rotationalRightMiddleFrontCharacter,
+    rotationalLeftMiddleFrontCharacter
 }

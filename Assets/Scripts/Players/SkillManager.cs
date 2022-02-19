@@ -31,10 +31,13 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private Transform leftHandEffectPosition;
     [SerializeField] private Transform head;
     [SerializeField] private Transform middleFrontCharacter;
+    [SerializeField] private Transform rotationalLeftMiddleFrontCharacter;
+    [SerializeField] private Transform rotationalRightMiddleFrontCharacter;
 
     private float elapsedTime;
 
     private bool skillFlag;
+    private bool skillWarning;
     private Skill cloneSkill = null;
     private int index = 0;
 
@@ -54,17 +57,21 @@ public class SkillManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[2]))
         {
-            cloneSkill = skillSlots[2].GetComponent<SkillSlot>().skillObject;
+            cloneSkill = skillSlots [2].GetComponent<SkillSlot>().skillObject;
             StartAnimations();
             GenerateSkill(2);
         }
-        else if (Input.GetKeyDown(KeyCode.A) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.A) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[3]))
         {
-            Debug.Log("D");
+            cloneSkill = skillSlots[3].GetComponent<SkillSlot>().skillObject;
+            StartAnimations();
+            GenerateSkill(3);
         }
-        else if (Input.GetKeyDown(KeyCode.S) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.S) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[4]))
         {
-            Debug.Log("E");
+            cloneSkill = skillSlots[4].GetComponent<SkillSlot>().skillObject;
+            StartAnimations();
+            GenerateSkill(4);
         }
         else if (Input.GetKeyDown(KeyCode.D) && !skillFlag)
         {
@@ -94,7 +101,7 @@ public class SkillManager : MonoBehaviour
             }
             */
 
-            if (skillDelay.Any())
+            if (skillDelay.Any() || skillWarning == true)
             {
                 for (int i = 0; i < skillDelay.Count; i++)
                 {
@@ -108,6 +115,11 @@ public class SkillManager : MonoBehaviour
                         skillPositionTypes.RemoveAt(i);
                     }
                 }
+            }
+            else if(skillWarning)
+            {
+                skillFlag = false;
+                skillWarning = false;
             }
 
             //elapsedTime -= Time.deltaTime;
@@ -146,6 +158,10 @@ public class SkillManager : MonoBehaviour
             effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.middleFrontCharacter)
             effect = Instantiate(skillParticle[index], middleFrontCharacter.position, middleFrontCharacter.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.rotationalRightMiddleFrontCharacter)
+            effect = Instantiate(skillParticle[index], rotationalRightMiddleFrontCharacter.position, rotationalRightMiddleFrontCharacter.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.rotationalLeftMiddleFrontCharacter)
+            effect = Instantiate(skillParticle[index], rotationalLeftMiddleFrontCharacter.position, rotationalLeftMiddleFrontCharacter.rotation);
 
         Destroy(effect, 5f);
     }
@@ -164,7 +180,14 @@ public class SkillManager : MonoBehaviour
     public void SkillReset()
     {
         GetComponent<PlayerMovement>().enabled = true;
-        skillFlag = false;
+        if (!skillDelay.Any())
+            skillFlag = false;
+        else
+        {
+            skillWarning = true;
+            Debug.LogWarning("Character has attack effect");
+        }
+
         index = 0;
         transform.parent = null;
         VFX.transform.parent = transform;
