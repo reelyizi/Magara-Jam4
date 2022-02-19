@@ -94,9 +94,8 @@ namespace EPOOutline
                 }
             }
 
-            [SerializeField]
-            [Range(0.0f, 10.0f)]
-            private float dilateShift = 5.0f;
+            [Range(0.0f, 1f)]
+            public float dilateShift = 1f;
 
             public float DilateShift
             {
@@ -111,9 +110,8 @@ namespace EPOOutline
                 }
             }
 
-            [SerializeField]
-            [Range(0.0f, 10.0f)]
-            private float blurShift = 5.0f;
+            [Range(0.0f, 1f)]
+            public float blurShift = 1f;
 
             public float BlurShift
             {

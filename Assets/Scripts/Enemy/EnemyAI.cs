@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     bool alreadyAttacked;
     public GameObject projectile;
     private GameObject[] otherEnemys;
+    public GameObject damageText;
 
     //States
     public float sightRange, attackRange, supportRange;
@@ -46,6 +47,12 @@ public class EnemyAI : MonoBehaviour
         }
 
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            DamageIndicator indicator=Instantiate(damageText,transform.position,Quaternion.identity).GetComponent<DamageIndicator>();
+            indicator.SetDamageText(Random.Range(10,30));
+        }
     }
     public void ChasePlayer()
     {
