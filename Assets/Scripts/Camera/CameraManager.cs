@@ -15,11 +15,12 @@ public class CameraManager : MonoBehaviour
     private float elapsedTime = 0f;
 
     [SerializeField] private Vector3 maxOffset, minOffset;
-    [SerializeField] private float zoomModifierY,zoomModifierZ, rotateSpeed;
+    [SerializeField] private float zoomModifierY, zoomModifierZ, rotateSpeed;
 
     void Start()
     {
         offset = transform.position - target.position;
+        maxOffset = offset;
     }
 
     void Update()
@@ -51,18 +52,28 @@ public class CameraManager : MonoBehaviour
     private void HandleZoom()
     {
         //transform.LookAt(target.position);
-        if (Input.GetAxis("Mouse ScrollWheel")>0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             //Zoom in
-            transform.position += new Vector3(0, -zoomModifierY, zoomModifierZ);
-            transform.Rotate(-rotateSpeed,0,0);
+            if (offset.y>minOffset.y)
+            {
+                transform.position += new Vector3(0, -zoomModifierY, zoomModifierZ);
+                offset += new Vector3(0, -zoomModifierY, zoomModifierZ);
+                transform.Rotate(-rotateSpeed, 0, 0);
+            }
+
 
         }
-        if (Input.GetAxis("Mouse ScrollWheel")<0)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             //Zoom out
-            transform.position+= new Vector3(0, zoomModifierY, -zoomModifierZ);
-            transform.Rotate(rotateSpeed,0,0);
+            if (offset.y<maxOffset.y)
+            {
+                transform.position += new Vector3(0, zoomModifierY, -zoomModifierZ);
+                offset += new Vector3(0, zoomModifierY, -zoomModifierZ);
+                transform.Rotate(rotateSpeed, 0, 0);
+            }
+
 
         }
     }
