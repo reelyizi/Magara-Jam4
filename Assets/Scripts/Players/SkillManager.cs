@@ -35,11 +35,11 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
+        if (Input.GetKeyDown(KeyCode.Q) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
         {
             GenerateSkill(0);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
+        else if (Input.GetKeyDown(KeyCode.W) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
         {
             VFX.transform.parent = null;
             transform.parent = VFX.transform;
@@ -50,19 +50,19 @@ public class SkillManager : MonoBehaviour
             characterAnimator.SetInteger("Skill Level", 1);
             GenerateSkill(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag)
         {
             Debug.Log("C");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.A) && !skillFlag)
         {
             Debug.Log("D");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.S) && !skillFlag)
         {
             Debug.Log("E");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha6) && !skillFlag)
+        else if (Input.GetKeyDown(KeyCode.D) && !skillFlag)
         {
             Debug.Log("F");
         }
