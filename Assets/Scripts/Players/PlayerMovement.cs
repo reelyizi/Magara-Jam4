@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private LayerMask layerMask;
+    private Vector3 target;
+    private Vector3 offset;
 
     private Vector3 moveDirection;
     private Vector3 velocity;
@@ -19,16 +22,30 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject effectPosition;
 
     private CharacterController characterController;
+    private NavMeshAgent agent;
     #endregion
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
         Move();
+    }
+
+    private void OnDisable()
+    {
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        target = transform.position - Vector3.up;
+    }
+
+    private void OnEnable()
+    {
+        agent.isStopped = false;
     }
 
     private void Move()
@@ -49,18 +66,19 @@ public class PlayerMovement : MonoBehaviour
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log(moveDirection);
-                moveDirection = (-transform.position + hit.point).normalized;
-                Debug.Log(moveDirection);
+                Debug.Log(hit.point);
+                target = hit.point;
+                //offset = target - transform.position;
+                //moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
             }
         }
-        
+        //Debug.DrawRay(transform.position, transform.position + test - (Vector3.up), Color.yellow);
             
         VFXRotation();
 
-        if (moveDirection != Vector3.zero)
+        if (offset.magnitude > .01f)
         {
             // Walk
             if (!Input.GetKey(KeyCode.LeftShift))
@@ -79,9 +97,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        moveDirection *= moveSpeed;
 
-        characterController.Move(moveDirection * Time.deltaTime);
+        agent.SetDestination(target);
+        Debug.Log(offset.magnitude);
+        //if(offset.magnitude > .1f)
+        //{
+        //    //offset = target - transform.position;
+        //    //moveDirection = moveSpeed * moveDirection;
+        //    Debug.Log(moveDirection);
+        //    characterController.Move(moveDirection * Time.deltaTime);
+        //}
+            
 
         //velocity.y += gravity * Time.deltaTime;
         //characterController.Move(velocity * Time.deltaTime);
