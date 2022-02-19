@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Skill", order = 1)]
 public class Skill : ScriptableObject
 {
-    public GameObject animation;
-    public float duration;
+    public List<GameObject> animation;
+    public List<float> cooldown;
+    public List<float> spawnDuration;
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SkillSlot : MonoBehaviour
 {
-    public ScriptableObject skillObject;
+    public Skill skillObject;
 }

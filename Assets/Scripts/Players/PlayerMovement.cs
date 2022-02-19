@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject VFX;
     [SerializeField] private float rotationSpeed;
 
+    [SerializeField] private GameObject effectPosition;
+
     private CharacterController characterController;
     #endregion
 
@@ -77,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             targetRotation = Quaternion.RotateTowards(VFX.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-            VFX.transform.rotation = targetRotation;           
+            VFX.transform.rotation = targetRotation;       
+            effectPosition.transform.rotation = targetRotation;
         }            
     }
 
