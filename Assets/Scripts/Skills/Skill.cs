@@ -8,4 +8,13 @@ public class Skill : ScriptableObject
     public List<GameObject> animation;
     public List<float> cooldown;
     public List<float> spawnDuration;
+    public int skillCooldown;
+
+    public SkillPositionType positionType;
+}
+
+public enum SkillPositionType
+{
+    character,
+    frontCharacter
 }

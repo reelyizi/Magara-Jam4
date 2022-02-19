@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
+    [SerializeField] private LayerMask layerMask;
 
     private Vector3 moveDirection;
     private Vector3 velocity;
@@ -39,11 +40,24 @@ public class PlayerMovement : MonoBehaviour
         //    velocity.y = -2f;
         //}
 
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
+        //float vertical = Input.GetAxis("Vertical");
+        //float horizontal = Input.GetAxis("Horizontal");
 
-        moveDirection = new Vector3(horizontal, 0, vertical);
+        //moveDirection = new Vector3(horizontal, 0, vertical);
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log(moveDirection);
+                moveDirection = (-transform.position + hit.point).normalized;
+                Debug.Log(moveDirection);
+            }
+        }
+        
+            
         VFXRotation();
 
         if (moveDirection != Vector3.zero)

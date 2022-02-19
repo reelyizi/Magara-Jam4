@@ -25,3 +25,6 @@ MonoBehaviour:
   - 1
   - 1
   - 2
+  - 1
+  skillCooldown: 5
+  positionType: 1

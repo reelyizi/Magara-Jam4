@@ -22,3 +22,5 @@ MonoBehaviour:
   spawnDuration:
   - 1
   - 1
+  - 1
+  positionType: 1
