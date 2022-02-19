@@ -24,11 +24,6 @@ public class SkillCooldownManagar : MonoBehaviour
     public List<float> cooldown = new List<float>();
     List<float> startCooldown = new List<float>();
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (bound.Any())

@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         VFXRotation();
 
         // Walk
-        if (offset.magnitude > .2f)
+        if (offset.magnitude > .5f)
         {           
             Walk();
 

@@ -35,7 +35,7 @@ AnimatorTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: Skill Level
-    m_EventTreshold: 2
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7606686626202754448}
   m_Solo: 0
@@ -758,7 +758,7 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 8157451305670745712}
-    m_Position: {x: -170, y: -180, z: 0}
+    m_Position: {x: -160, y: -230, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions:
   - {fileID: -6929313443067675075}
@@ -775,7 +775,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: -640, y: -30, z: 0}
   m_EntryPosition: {x: -560, y: 10, z: 0}
   m_ExitPosition: {x: 260, y: 10, z: 0}
-  m_ParentStateMachinePosition: {x: 240, y: -90, z: 0}
+  m_ParentStateMachinePosition: {x: 370, y: -230, z: 0}
   m_DefaultState: {fileID: 7496980631478388377}
 --- !u!1102 &2030856479845812541
 AnimatorState:
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle:
-  - {fileID: 1107296871017770, guid: 3ff59f3066a1bc6449cfe3a4937f4902, type: 3}
+  - {fileID: 1819066416490906, guid: 992ab666e5f2f5c4cb8f80f5e7b2152f, type: 3}
   delay:
   - 0.15
   positionType: 01000000
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   delay:
   - 0.18
   - 0.34
-  - 1.17
+  - 0.8
   positionType: 010000000100000002000000
 --- !u!114 &6689033204243970444
 MonoBehaviour:
@@ -1114,9 +1114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d80e518b099604fbcdc6858cbd0be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: []
-  delay: []
-  positionType: 
+  particle:
+  - {fileID: 1819066416490906, guid: 992ab666e5f2f5c4cb8f80f5e7b2152f, type: 3}
+  delay:
+  - 0.19
+  positionType: 01000000
 --- !u!1102 &7176878297957663193
 AnimatorState:
   serializedVersion: 6
@@ -1211,7 +1213,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7606686626202754448}
-    m_Position: {x: 280, y: 110, z: 0}
+    m_Position: {x: 290, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4316637694347026355}
     m_Position: {x: 280, y: 220, z: 0}
@@ -1220,7 +1222,7 @@ AnimatorStateMachine:
     m_Position: {x: 520, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3720004456239365767}
-    m_Position: {x: 770, y: 220, z: 0}
+    m_Position: {x: 780, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5518662826929310554}
     m_Position: {x: 280, y: 320, z: 0}
@@ -1417,7 +1419,7 @@ AnimatorTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: Skill Level
-    m_EventTreshold: 1
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5518662826929310554}
   m_Solo: 0

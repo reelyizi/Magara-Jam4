@@ -30,7 +30,7 @@ public class SkillManager : MonoBehaviour
     private float elapsedTime;
 
     private bool skillFlag;
-    [SerializeField] private Skill cloneSkill = null;
+    //private Skill cloneSkill = null;
     private int index = 0;
 
     void Update()
@@ -114,9 +114,9 @@ public class SkillManager : MonoBehaviour
     private void GenerateSkill(int number)
     {
         GetComponent<PlayerMovement>().enabled = false;
-        cloneSkill = skillSlots[number].GetComponent<SkillSlot>().skillObject;
+        //cloneSkill = skillSlots[number].GetComponent<SkillSlot>().skillObject;
         skillFlag = true;
-        SkillCooldownManagar._instance.AddCooldown(skillSlots[number], cloneSkill.skillCooldown);
+        SkillCooldownManagar._instance.AddCooldown(skillSlots[number], skillSlots[number].GetComponent<SkillSlot>().skillObject.skillCooldown);
     }
 
     public void AddEffectList(List<float> delay, List<GameObject> particle, List<SkillPositionType> spt)
@@ -124,20 +124,19 @@ public class SkillManager : MonoBehaviour
         delay.ForEach(delegate (float delayTime) { skillDelay.Add(delayTime * 3); });
         particle.ForEach(delegate (GameObject particleObject) { skillParticle.Add(particleObject); });
         spt.ForEach(delegate (SkillPositionType spType) { skillPositionTypes.Add(spType); });
-
-        //skillDelay.Add(delay);
-        //skillParticle.Add(particle);
-        //skillPositionTypes.Add(spt);
     }
 
     private void GenerateEffect(int index)
     {
+        GameObject effect = null;
         if (skillPositionTypes[index] == SkillPositionType.character)
-            Instantiate(skillParticle[index], transform.position, transform.rotation);
+            effect = Instantiate(skillParticle[index], transform.position, transform.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.frontCharacter)
-            Instantiate(skillParticle[index], effectPosition.position, effectPosition.rotation);
+            effect = Instantiate(skillParticle[index], effectPosition.position, effectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.groundObject)
-            Instantiate(skillParticle[index], groundEffectPosition.position, groundEffectPosition.rotation);
+            effect = Instantiate(skillParticle[index], groundEffectPosition.position, groundEffectPosition.rotation);
+
+        Destroy(effect, 5f);
     }
 
     public void SkillReset()

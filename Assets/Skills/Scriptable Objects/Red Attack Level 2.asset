@@ -12,12 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ea95c2bf6e0854f86ea4e3d5799f8a, type: 3}
   m_Name: Red Attack Level 2
   m_EditorClassIdentifier: 
-  animation:
-  - {fileID: 1819066416490906, guid: 992ab666e5f2f5c4cb8f80f5e7b2152f, type: 3}
-  - {fileID: 1819066416490906, guid: 63f1b221369de5f44a8f86049256d6cd, type: 3}
-  cooldown:
-  - 1
-  spawnDuration:
-  - 1
-  - 1
-  positionType: 1
+  skillType: 1
+  skillLevel: 2
+  skillCooldown: 4

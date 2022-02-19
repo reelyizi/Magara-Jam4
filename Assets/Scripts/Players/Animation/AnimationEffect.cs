@@ -9,7 +9,6 @@ public class AnimationEffect : StateMachineBehaviour
     [SerializeField] List<SkillPositionType> positionType;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("test");
         SkillManager._instance.AddEffectList(delay, particle, positionType);
     }
 }
