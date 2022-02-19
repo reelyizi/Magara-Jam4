@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log(hit.point);
+                Debug.Log(hit.collider.gameObject.name);
                 target = hit.point;
                 //offset = target - transform.position;
                 //moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
