@@ -12,6 +12,9 @@ public class MeshDestroy : MonoBehaviour
 
     public int CutCascades = 1;
     public float ExplodeForce = 0;
+    public float destroyTime=3;
+    bool isDestroyed=true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +25,9 @@ public class MeshDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isDestroyed)
         {
+            isDestroyed=false;
             DestroyMesh();
         }
     }
@@ -71,11 +75,18 @@ public class MeshDestroy : MonoBehaviour
         {
             parts[i].MakeGameobject(this);
             parts[i].GameObject.GetComponent<Rigidbody>().AddForceAtPosition(parts[i].Bounds.center * ExplodeForce, transform.position);
+            Destroy(parts[i].GameObject,destroyTime);
         }
-
         Destroy(gameObject);
     }
-
+    IEnumerator DestroyParts(List<PartMesh> parts)
+    {
+        yield return new WaitForSeconds(2);
+        for(int i =0;i<parts.Count;i++)
+        {
+            Destroy(parts[i].GameObject);
+        }
+    }
     private PartMesh GenerateMesh(PartMesh original, Plane plane, bool left)
     {
         var partMesh = new PartMesh() { };

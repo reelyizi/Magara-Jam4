@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 67649302}
   - component: {fileID: 67649301}
   - component: {fileID: 67649306}
+  - component: {fileID: 67649305}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -219,6 +220,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &67649305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67649300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1faaee99e5adff4f8e860b34d44075b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CutCascades: 5
+  ExplodeForce: 1000
+  destroyTime: 4
 --- !u!54 &67649306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2038,10 +2054,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213d97ef4a5b5e2419b6071328569eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VFX: {fileID: 0}
   skillSlots:
   - {fileID: 745138508}
   - {fileID: 122036050}
+  skillParticle: []
+  skillDelay: []
+  skillPositionTypes: 
   effectPosition: {fileID: 1259563367}
+  groundEffectPosition: {fileID: 0}
   cloneSkill: {fileID: 0}
 --- !u!114 &2031082591
 MonoBehaviour:
