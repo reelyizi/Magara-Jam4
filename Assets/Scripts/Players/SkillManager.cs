@@ -52,7 +52,7 @@ public class SkillManager : MonoBehaviour
             StartAnimations();
             GenerateSkill(1);
         }
-        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
+        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[2]))
         {
             cloneSkill = skillSlots[2].GetComponent<SkillSlot>().skillObject;
             StartAnimations();
