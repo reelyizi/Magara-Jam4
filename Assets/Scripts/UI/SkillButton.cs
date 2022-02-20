@@ -11,6 +11,7 @@ public class SkillButton : MonoBehaviour
         {
             previousSkill.SetActive(false);
         }
+        previousSkill = skill;
         skill.SetActive(true);
     }
 }

@@ -20,12 +20,6 @@ public class SkillDamageManager : MonoBehaviour
 
     public int redSlashDamage = 40;
     public int redSlashCriticalChance = 10;
-    public int RedSlashCriticalChance
-    {
-        get { return redSlashCriticalChance; }
-        set { redSlashCriticalChance += value; }
-    }
-
     public int redSlashLevel = 1;
     public int RedSlashLevel { 
         get { return redSlashLevel; } 
