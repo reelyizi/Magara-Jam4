@@ -1775,7 +1775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &691976048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1883,6 +1883,7 @@ GameObject:
   - component: {fileID: 805672504}
   - component: {fileID: 805672503}
   - component: {fileID: 805672502}
+  - component: {fileID: 4530728123527294187}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2003,6 +2004,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4530728123527294187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805672500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3820087023a687418ea0fc658522b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillObject: {fileID: 11400000, guid: 686ecd55c712da141b082b30a78d7831, type: 2}
 --- !u!1 &864140694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,6 +2197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916748909}
+  - component: {fileID: 9112487957039110346}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -2213,6 +2228,22 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &9112487957039110346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916748908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319c0625e0861224ba322e2e962713d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redSlashSkillButton: {fileID: 0}
+  skillLevel1: {fileID: 11400000, guid: 686ecd55c712da141b082b30a78d7831, type: 2}
+  skillLevel2: {fileID: 11400000, guid: 62b311edcaed1c64583ddf3eed647342, type: 2}
+  skillLevel3: {fileID: 11400000, guid: c5b3206249651ff44a586787e9da6f7e, type: 2}
 --- !u!1 &921807805
 GameObject:
   m_ObjectHideFlags: 0

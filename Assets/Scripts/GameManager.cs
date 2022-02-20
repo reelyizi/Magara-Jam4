@@ -29,6 +29,23 @@ public class GameManager : MonoBehaviour
     public GameObject skillPanel, pausePanel, inGamePanel;
 
     public int playerXP;
+    public int PlayerXP
+    {
+        get { return playerXP; }
+        set 
+        {
+            playerXP += value; 
+            if(PlayerXP >= nextLevelXP)
+            {
+                PlayerXP = -nextLevelXP;
+                attributePoints++;
+            }
+            // Do Image fill
+        }
+    }
+
+    [SerializeField] private int nextLevelXP = 100;
+    public int attributePoints = 0;
 
     void Update()
     {

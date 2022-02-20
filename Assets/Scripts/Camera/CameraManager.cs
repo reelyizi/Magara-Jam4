@@ -51,7 +51,7 @@ public class CameraManager : MonoBehaviour
     }
     private void HandleZoom()
     {
-        if(GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
+        if(!GameManager.instance.skillPanel.activeInHierarchy)
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
