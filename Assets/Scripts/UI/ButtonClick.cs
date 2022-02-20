@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
@@ -8,11 +9,11 @@ public class ButtonClick : MonoBehaviour
     [SerializeField] private int requiredXP;
 
     public GameObject fade;
-    [SerializeField] private EnchanceType enchanceType;
-    [SerializeField] private SkillType skillType;
+    public EnchanceType enchanceType;
+    public SkillType skillType;
 
-    [SerializeField] private int damage;
-    [SerializeField] private int criticalChance;
+    public int damage;
+    public int criticalChance;
     private void Start()
     {
         GetComponent<Button>().onClick.AddListener(TaskOnClick);
