@@ -51,30 +51,32 @@ public class CameraManager : MonoBehaviour
     }
     private void HandleZoom()
     {
-        //transform.LookAt(target.position);
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if(GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
         {
-            //Zoom in
-            if (offset.y>minOffset.y)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
-                transform.position += new Vector3(0, -zoomModifierY, zoomModifierZ);
-                offset += new Vector3(0, -zoomModifierY, zoomModifierZ);
-                transform.Rotate(-rotateSpeed, 0, 0);
+                //Zoom in
+                if (offset.y > minOffset.y)
+                {
+                    transform.position += new Vector3(0, -zoomModifierY, zoomModifierZ);
+                    offset += new Vector3(0, -zoomModifierY, zoomModifierZ);
+                    transform.Rotate(-rotateSpeed, 0, 0);
+                }
+
+
             }
-
-
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            //Zoom out
-            if (offset.y<maxOffset.y)
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                transform.position += new Vector3(0, zoomModifierY, -zoomModifierZ);
-                offset += new Vector3(0, zoomModifierY, -zoomModifierZ);
-                transform.Rotate(rotateSpeed, 0, 0);
+                //Zoom out
+                if (offset.y < maxOffset.y)
+                {
+                    transform.position += new Vector3(0, zoomModifierY, -zoomModifierZ);
+                    offset += new Vector3(0, zoomModifierY, -zoomModifierZ);
+                    transform.Rotate(rotateSpeed, 0, 0);
+                }
+
+
             }
-
-
-        }
+        }        
     }
 }

@@ -43,87 +43,90 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
+        if(GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
         {
-            cloneSkill = skillSlots[0].GetComponent<SkillSlot>().skillObject;
-            StartAnimations();
-            GenerateSkill(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.W) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
-        {
-            cloneSkill = skillSlots[1].GetComponent<SkillSlot>().skillObject;
-            StartAnimations();
-            GenerateSkill(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[2]))
-        {
-            cloneSkill = skillSlots [2].GetComponent<SkillSlot>().skillObject;
-            StartAnimations();
-            GenerateSkill(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.A) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[3]))
-        {
-            cloneSkill = skillSlots[3].GetComponent<SkillSlot>().skillObject;
-            StartAnimations();
-            GenerateSkill(3);
-        }
-        else if (Input.GetKeyDown(KeyCode.S) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[4]))
-        {
-            cloneSkill = skillSlots[4].GetComponent<SkillSlot>().skillObject;
-            StartAnimations();
-            GenerateSkill(4);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) && !skillFlag)
-        {
-            Debug.Log("F");
-        }
-
-        if (skillFlag)
-        {
-
-            /*
-            for (int i = index; i < cloneSkill.animation.Count && elapsedTime <= 0; i++)
+            if (Input.GetKeyDown(KeyCode.Q) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
             {
-                index = i + 1;
-
-                if (i < cloneSkill.animation.Count - 1)
-                    elapsedTime = cloneSkill.cooldown[i];
-
-                GameObject spawnedSkillEffect = null;
-                if (cloneSkill.positionType == SkillPositionType.frontCharacter)
-                    spawnedSkillEffect = Instantiate(cloneSkill.animation[i], effectPosition.position, effectPosition.rotation);
-                else if (cloneSkill.positionType == SkillPositionType.character)
-                    spawnedSkillEffect = Instantiate(cloneSkill.animation[i], transform.position, effectPosition.rotation);
-
-                //Destroy(spawnedSkillEffect, cloneSkill.spawnDuration[(i != cloneSkill.animation.Count - 1) ? i : i - 1]);
-                Destroy(spawnedSkillEffect, cloneSkill.spawnDuration[i]);
-                //Destroy(spawnedSkillEffect, 2f);
+                cloneSkill = skillSlots[0].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(0);
             }
-            */
-
-            if (skillDelay.Any() || skillWarning == true)
+            else if (Input.GetKeyDown(KeyCode.W) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[1]))
             {
-                for (int i = 0; i < skillDelay.Count; i++)
-                {
-                    skillDelay[i] -= Time.deltaTime;
-                    if (skillDelay[i] <= 0)
-                    {
-                        GenerateEffect(index);
+                cloneSkill = skillSlots[1].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(1);
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[2]))
+            {
+                cloneSkill = skillSlots[2].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(2);
+            }
+            else if (Input.GetKeyDown(KeyCode.A) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[3]))
+            {
+                cloneSkill = skillSlots[3].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(3);
+            }
+            else if (Input.GetKeyDown(KeyCode.S) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[4]))
+            {
+                cloneSkill = skillSlots[4].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(4);
+            }
+            else if (Input.GetKeyDown(KeyCode.D) && !skillFlag)
+            {
+                Debug.Log("F");
+            }
 
-                        skillDelay.RemoveAt(i);
-                        skillParticle.RemoveAt(i);
-                        skillPositionTypes.RemoveAt(i);
+            if (skillFlag)
+            {
+
+                /*
+                for (int i = index; i < cloneSkill.animation.Count && elapsedTime <= 0; i++)
+                {
+                    index = i + 1;
+
+                    if (i < cloneSkill.animation.Count - 1)
+                        elapsedTime = cloneSkill.cooldown[i];
+
+                    GameObject spawnedSkillEffect = null;
+                    if (cloneSkill.positionType == SkillPositionType.frontCharacter)
+                        spawnedSkillEffect = Instantiate(cloneSkill.animation[i], effectPosition.position, effectPosition.rotation);
+                    else if (cloneSkill.positionType == SkillPositionType.character)
+                        spawnedSkillEffect = Instantiate(cloneSkill.animation[i], transform.position, effectPosition.rotation);
+
+                    //Destroy(spawnedSkillEffect, cloneSkill.spawnDuration[(i != cloneSkill.animation.Count - 1) ? i : i - 1]);
+                    Destroy(spawnedSkillEffect, cloneSkill.spawnDuration[i]);
+                    //Destroy(spawnedSkillEffect, 2f);
+                }
+                */
+
+                if (skillDelay.Any() || skillWarning == true)
+                {
+                    for (int i = 0; i < skillDelay.Count; i++)
+                    {
+                        skillDelay[i] -= Time.deltaTime;
+                        if (skillDelay[i] <= 0)
+                        {
+                            GenerateEffect(index);
+
+                            skillDelay.RemoveAt(i);
+                            skillParticle.RemoveAt(i);
+                            skillPositionTypes.RemoveAt(i);
+                        }
                     }
                 }
-            }
-            else if(skillWarning)
-            {
-                skillFlag = false;
-                skillWarning = false;
-            }
+                else if (skillWarning)
+                {
+                    skillFlag = false;
+                    skillWarning = false;
+                }
 
-            //elapsedTime -= Time.deltaTime;
-        }
+                //elapsedTime -= Time.deltaTime;
+            }
+        }        
     }
 
     private void GenerateSkill(int number)

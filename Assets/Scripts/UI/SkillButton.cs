@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class SkillButton : MonoBehaviour
 {
-    public void Test()
+    private GameObject previousSkill = null;
+    public void SelectSkill(GameObject skill)
     {
-        Debug.Log("Test");
+        if(previousSkill != null)
+        {
+            previousSkill.SetActive(false);
+        }
+        skill.SetActive(true);
     }
 }

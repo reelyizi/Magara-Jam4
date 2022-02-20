@@ -26,7 +26,7 @@ public class SkillCooldownManagar : MonoBehaviour
 
     void Update()
     {
-        if (bound.Any())
+        if (bound.Any() && GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
         {
             for (int i = 0; i < cooldown.Count; i++)
             {
