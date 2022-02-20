@@ -1,619 +1,1841 @@
 fileFormatVersion: 2
 guid: 41bcb539a4f6ec147938642033c98f7f
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armwraps
-    100002: Base HumanHair05
-    100004: Base HumanHair06
-    100006: Base HumanHair07
-    100008: Base HumanHair08
-    100010: Base HumanHair09
-    100012: Base HumanHair10
-    100014: Base HumanHair11
-    100016: Base HumanHair12
-    100018: Base HumanHair13
-    100020: Base HumanHair14
-    100022: Base HumanHair15
-    100024: Base HumanHair16
-    100026: Base HumanHair17
-    100028: Base HumanHair18
-    100030: Base HumanHair20
-    100032: Base HumanHair21
-    100034: Base HumanHair22
-    100036: Base HumanHair23
-    100038: Base HumanHair24
-    100040: Base HumanHair25
-    100042: Base HumanHair26
-    100044: Base HumanHair27
-    100046: Base HumanHair28
-    100048: Base HumanHair29
-    100050: Base HumanHair30
-    100052: Base HumanHair31
-    100054: Base HumanHair32
-    100056: Base HumanHair33
-    100058: Base HumanHair34
-    100060: Base HumanHair35
-    100062: Base HumanHair36
-    100064: Base HumanHair37
-    100066: Base HumanHair38
-    100068: Base HumanHair40
-    100070: Base HumanHair41
-    100072: Base HumanHair42
-    100074: Base HumanHair43
-    100076: Base HumanHair44
-    100078: Base HumanHair45
-    100080: Base HumanHair46
-    100082: Base HumanHair47
-    100084: Base HumanHair48
-    100086: Base HumanHair49
-    100088: Base HumanHead
-    100090: Base HumanJaw
-    100092: Base HumanLCalf
-    100094: Base HumanLCollarbone
-    100096: Base HumanLDigit11
-    100098: Base HumanLDigit12
-    100100: Base HumanLDigit13
-    100102: Base HumanLDigit21
-    100104: Base HumanLDigit22
-    100106: Base HumanLDigit23
-    100108: Base HumanLDigit31
-    100110: Base HumanLDigit32
-    100112: Base HumanLDigit33
-    100114: Base HumanLDigit41
-    100116: Base HumanLDigit42
-    100118: Base HumanLDigit43
-    100120: Base HumanLDigit51
-    100122: Base HumanLDigit52
-    100124: Base HumanLDigit53
-    100126: Base HumanLFoot
-    100128: Base HumanLForearm1
-    100130: Base HumanLForearm2
-    100132: Base HumanLForearm3
-    100134: Base HumanLPalm
-    100136: Base HumanLThigh1
-    100138: Base HumanLThigh2
-    100140: Base HumanLToe11
-    100142: Base HumanLToe12
-    100144: Base HumanLUpperarm1
-    100146: Base HumanLUpperarm2
-    100148: Base HumanNeck
-    100150: Base HumanPelvis
-    100152: Base HumanPonytail1
-    100154: Base HumanPonytail10
-    100156: Base HumanPonytail2
-    100158: Base HumanPonytail3
-    100160: Base HumanPonytail4
-    100162: Base HumanPonytail5
-    100164: Base HumanPonytail6
-    100166: Base HumanPonytail7
-    100168: Base HumanPonytail8
-    100170: Base HumanPonytail9
-    100172: Base HumanRCalf
-    100174: Base HumanRCollarbone
-    100176: Base HumanRDigit11
-    100178: Base HumanRDigit12
-    100180: Base HumanRDigit13
-    100182: Base HumanRDigit21
-    100184: Base HumanRDigit22
-    100186: Base HumanRDigit23
-    100188: Base HumanRDigit31
-    100190: Base HumanRDigit32
-    100192: Base HumanRDigit33
-    100194: Base HumanRDigit41
-    100196: Base HumanRDigit42
-    100198: Base HumanRDigit43
-    100200: Base HumanRDigit51
-    100202: Base HumanRDigit52
-    100204: Base HumanRDigit53
-    100206: Base HumanRFoot
-    100208: Base HumanRForearm1
-    100210: Base HumanRForearm2
-    100212: Base HumanRForearm3
-    100214: Base HumanRibcage
-    100216: Base HumanRPalm
-    100218: Base HumanRThigh1
-    100220: Base HumanRThigh2
-    100222: Base HumanRToe11
-    100224: Base HumanRToe12
-    100226: Base HumanRUpperarm1
-    100228: Base HumanRUpperarm2
-    100230: Base HumanSheathRig
-    100232: Base HumanSpine1
-    100234: Base HumanSpine2
-    100236: Base HumanSpine3
-    100238: Base HumanTassetRig1
-    100240: Base HumanTassetRig2
-    100242: Base HumanTongue1
-    100244: Base HumanTongue2
-    100246: Base HumanTongue3
-    100248: Bicep_Wraps
-    100250: BoneRoot
-    100252: Bracer_Spikes
-    100254: Bracers
-    100256: DaggerBone
-    100258: ElfHangers01
-    100260: ElfHangers02
-    100262: ElfHangers03
-    100264: ElfHangers04
-    100266: ElfHangers05
-    100268: ElfHangers06
-    100270: ElfHangersHub
-    100272: EyeL
-    100274: EyePointL
-    100276: EyePointR
-    100278: EyeR
-    100280: Fur_Arm
-    100282: Fur_Chest
-    100284: Fur_Leg
-    100286: Fur_Pauldron_L
-    100288: Fur_Pauldron_R
-    100290: Fur_Skirt
-    100292: Half_Orc_F_Body
-    100294: Half_Orc_F_Head
-    100296: //RootNode
-    100298: HandBoneL
-    100300: HandBoneR
-    100302: Jewelry_Ear_L
-    100304: Jewelry_Ear_R
-    100306: Jewelry_Nose
-    100308: L_eyelid_lower
-    100310: L_eyelid_top
-    100312: Legwraps
-    100314: OrcFemHair_hood
-    100316: OrcFemHair_long
-    100318: OrcFemHair_ponytail
-    100320: OrcFemHair_short
-    100322: Pants
-    100324: Pauldron_L
-    100326: Pauldron_R
-    100328: Pauldron_Spikes_L
-    100330: Pauldron_Spikes_R
-    100332: Poleyn
-    100334: Poleyn_Spikes
-    100336: R_eyelid_lower
-    100338: R_eyelid_top
-    100340: ShieldBoneL
-    100342: ShieldBoneR
-    100344: Shinguard_Spikes
-    100346: Shinguards
-    100348: Shoes
-    100350: Skirt
-    100352: Skirt_Hangers
-    100354: SkirtRigHub
-    100356: SkirtRigSkirt01
-    100358: SkirtRigSkirt02
-    100360: SkirtRigSkirt03
-    100362: SkirtRigSkirt04
-    100364: SkirtRigSkirt05
-    100366: SkirtRigSkirt06
-    100368: SkirtRigSkirt07
-    100370: SkirtRigSkirt08
-    100372: SkirtRigSkirt09
-    100374: SkirtRigSkirt10
-    100376: SkirtRigSkirt11
-    100378: SkirtRigSkirt12
-    100380: SkirtRigSkirt13
-    100382: SkirtRigSkirt14
-    100384: SkirtRigSkirt15
-    100386: SkirtRigSkirt16
-    100388: SkirtRigSkirt17
-    100390: SkirtRigSkirt18
-    100392: SkirtRigSkirt19
-    100394: SkirtRigSkirt20
-    100396: SkirtRigSkirt21
-    100398: SkirtRigSkirt22
-    100400: SkirtRigSkirt23
-    100402: SkirtRigSkirt24
-    100404: Thigh_Wraps
-    100406: Vest
-    100408: Vest_Belt_1
-    100410: Vest_Belt_2
-    100412: Waist_Wrap
-    100414: Waist_Wrap_Loops
-    100416: X_Belt_L
-    100418: X_Belt_R
-    100420: SpearBone
-    100422: Half_Orc_Body
-    100424: Half_Orc_Head
-    100426: Club
-    100428: Club004_Club
-    100430: Club004_Metal
-    100432: Club004_Spikes
-    100434: Club004_Wraps
-    100436: Sword
-    100438: Sword009_Blade
-    100440: Sword009_Crossbar
-    100442: Sword009_Handle
-    100444: Sword009_Spikes
-    100446: Head
-    100448: SkirtRig
-    400000: Armwraps
-    400002: Base HumanHair05
-    400004: Base HumanHair06
-    400006: Base HumanHair07
-    400008: Base HumanHair08
-    400010: Base HumanHair09
-    400012: Base HumanHair10
-    400014: Base HumanHair11
-    400016: Base HumanHair12
-    400018: Base HumanHair13
-    400020: Base HumanHair14
-    400022: Base HumanHair15
-    400024: Base HumanHair16
-    400026: Base HumanHair17
-    400028: Base HumanHair18
-    400030: Base HumanHair20
-    400032: Base HumanHair21
-    400034: Base HumanHair22
-    400036: Base HumanHair23
-    400038: Base HumanHair24
-    400040: Base HumanHair25
-    400042: Base HumanHair26
-    400044: Base HumanHair27
-    400046: Base HumanHair28
-    400048: Base HumanHair29
-    400050: Base HumanHair30
-    400052: Base HumanHair31
-    400054: Base HumanHair32
-    400056: Base HumanHair33
-    400058: Base HumanHair34
-    400060: Base HumanHair35
-    400062: Base HumanHair36
-    400064: Base HumanHair37
-    400066: Base HumanHair38
-    400068: Base HumanHair40
-    400070: Base HumanHair41
-    400072: Base HumanHair42
-    400074: Base HumanHair43
-    400076: Base HumanHair44
-    400078: Base HumanHair45
-    400080: Base HumanHair46
-    400082: Base HumanHair47
-    400084: Base HumanHair48
-    400086: Base HumanHair49
-    400088: Base HumanHead
-    400090: Base HumanJaw
-    400092: Base HumanLCalf
-    400094: Base HumanLCollarbone
-    400096: Base HumanLDigit11
-    400098: Base HumanLDigit12
-    400100: Base HumanLDigit13
-    400102: Base HumanLDigit21
-    400104: Base HumanLDigit22
-    400106: Base HumanLDigit23
-    400108: Base HumanLDigit31
-    400110: Base HumanLDigit32
-    400112: Base HumanLDigit33
-    400114: Base HumanLDigit41
-    400116: Base HumanLDigit42
-    400118: Base HumanLDigit43
-    400120: Base HumanLDigit51
-    400122: Base HumanLDigit52
-    400124: Base HumanLDigit53
-    400126: Base HumanLFoot
-    400128: Base HumanLForearm1
-    400130: Base HumanLForearm2
-    400132: Base HumanLForearm3
-    400134: Base HumanLPalm
-    400136: Base HumanLThigh1
-    400138: Base HumanLThigh2
-    400140: Base HumanLToe11
-    400142: Base HumanLToe12
-    400144: Base HumanLUpperarm1
-    400146: Base HumanLUpperarm2
-    400148: Base HumanNeck
-    400150: Base HumanPelvis
-    400152: Base HumanPonytail1
-    400154: Base HumanPonytail10
-    400156: Base HumanPonytail2
-    400158: Base HumanPonytail3
-    400160: Base HumanPonytail4
-    400162: Base HumanPonytail5
-    400164: Base HumanPonytail6
-    400166: Base HumanPonytail7
-    400168: Base HumanPonytail8
-    400170: Base HumanPonytail9
-    400172: Base HumanRCalf
-    400174: Base HumanRCollarbone
-    400176: Base HumanRDigit11
-    400178: Base HumanRDigit12
-    400180: Base HumanRDigit13
-    400182: Base HumanRDigit21
-    400184: Base HumanRDigit22
-    400186: Base HumanRDigit23
-    400188: Base HumanRDigit31
-    400190: Base HumanRDigit32
-    400192: Base HumanRDigit33
-    400194: Base HumanRDigit41
-    400196: Base HumanRDigit42
-    400198: Base HumanRDigit43
-    400200: Base HumanRDigit51
-    400202: Base HumanRDigit52
-    400204: Base HumanRDigit53
-    400206: Base HumanRFoot
-    400208: Base HumanRForearm1
-    400210: Base HumanRForearm2
-    400212: Base HumanRForearm3
-    400214: Base HumanRibcage
-    400216: Base HumanRPalm
-    400218: Base HumanRThigh1
-    400220: Base HumanRThigh2
-    400222: Base HumanRToe11
-    400224: Base HumanRToe12
-    400226: Base HumanRUpperarm1
-    400228: Base HumanRUpperarm2
-    400230: Base HumanSheathRig
-    400232: Base HumanSpine1
-    400234: Base HumanSpine2
-    400236: Base HumanSpine3
-    400238: Base HumanTassetRig1
-    400240: Base HumanTassetRig2
-    400242: Base HumanTongue1
-    400244: Base HumanTongue2
-    400246: Base HumanTongue3
-    400248: Bicep_Wraps
-    400250: BoneRoot
-    400252: Bracer_Spikes
-    400254: Bracers
-    400256: DaggerBone
-    400258: ElfHangers01
-    400260: ElfHangers02
-    400262: ElfHangers03
-    400264: ElfHangers04
-    400266: ElfHangers05
-    400268: ElfHangers06
-    400270: ElfHangersHub
-    400272: EyeL
-    400274: EyePointL
-    400276: EyePointR
-    400278: EyeR
-    400280: Fur_Arm
-    400282: Fur_Chest
-    400284: Fur_Leg
-    400286: Fur_Pauldron_L
-    400288: Fur_Pauldron_R
-    400290: Fur_Skirt
-    400292: Half_Orc_F_Body
-    400294: Half_Orc_F_Head
-    400296: //RootNode
-    400298: HandBoneL
-    400300: HandBoneR
-    400302: Jewelry_Ear_L
-    400304: Jewelry_Ear_R
-    400306: Jewelry_Nose
-    400308: L_eyelid_lower
-    400310: L_eyelid_top
-    400312: Legwraps
-    400314: OrcFemHair_hood
-    400316: OrcFemHair_long
-    400318: OrcFemHair_ponytail
-    400320: OrcFemHair_short
-    400322: Pants
-    400324: Pauldron_L
-    400326: Pauldron_R
-    400328: Pauldron_Spikes_L
-    400330: Pauldron_Spikes_R
-    400332: Poleyn
-    400334: Poleyn_Spikes
-    400336: R_eyelid_lower
-    400338: R_eyelid_top
-    400340: ShieldBoneL
-    400342: ShieldBoneR
-    400344: Shinguard_Spikes
-    400346: Shinguards
-    400348: Shoes
-    400350: Skirt
-    400352: Skirt_Hangers
-    400354: SkirtRigHub
-    400356: SkirtRigSkirt01
-    400358: SkirtRigSkirt02
-    400360: SkirtRigSkirt03
-    400362: SkirtRigSkirt04
-    400364: SkirtRigSkirt05
-    400366: SkirtRigSkirt06
-    400368: SkirtRigSkirt07
-    400370: SkirtRigSkirt08
-    400372: SkirtRigSkirt09
-    400374: SkirtRigSkirt10
-    400376: SkirtRigSkirt11
-    400378: SkirtRigSkirt12
-    400380: SkirtRigSkirt13
-    400382: SkirtRigSkirt14
-    400384: SkirtRigSkirt15
-    400386: SkirtRigSkirt16
-    400388: SkirtRigSkirt17
-    400390: SkirtRigSkirt18
-    400392: SkirtRigSkirt19
-    400394: SkirtRigSkirt20
-    400396: SkirtRigSkirt21
-    400398: SkirtRigSkirt22
-    400400: SkirtRigSkirt23
-    400402: SkirtRigSkirt24
-    400404: Thigh_Wraps
-    400406: Vest
-    400408: Vest_Belt_1
-    400410: Vest_Belt_2
-    400412: Waist_Wrap
-    400414: Waist_Wrap_Loops
-    400416: X_Belt_L
-    400418: X_Belt_R
-    400420: SpearBone
-    400422: Half_Orc_Body
-    400424: Half_Orc_Head
-    400426: Club
-    400428: Club004_Club
-    400430: Club004_Metal
-    400432: Club004_Spikes
-    400434: Club004_Wraps
-    400436: Sword
-    400438: Sword009_Blade
-    400440: Sword009_Crossbar
-    400442: Sword009_Handle
-    400444: Sword009_Spikes
-    400446: Head
-    400448: SkirtRig
-    2100000: jewelry
-    2100002: 'Material #165'
-    2100004: fur
-    2100006: bracers
-    2100008: skirt
-    2100010: pants
-    2100012: 'Material #195'
-    2100014: TorsoBelts
-    2100016: 'Material #167'
-    2100018: legwraps
-    2100020: hair
-    2100022: armwraps
-    2100024: Orc_F_Head
-    2100026: OrcEyebrows
-    2100028: Eyeshine
-    2100030: club_low_lambert1
-    2100032: sword009_set
-    2100034: Eyes_mat
-    2100036: Mouth_mat
-    2300000: Sword009_Spikes
-    2300002: Club004_Club
-    2300004: Club004_Metal
-    2300006: Club004_Spikes
-    2300008: Club004_Wraps
-    2300010: Sword009_Blade
-    2300012: Sword009_Crossbar
-    2300014: Sword009_Handle
-    3300000: Sword009_Spikes
-    3300002: Club004_Club
-    3300004: Club004_Metal
-    3300006: Club004_Spikes
-    3300008: Club004_Wraps
-    3300010: Sword009_Blade
-    3300012: Sword009_Crossbar
-    3300014: Sword009_Handle
-    4300000: Jewelry_Ear_L
-    4300002: Jewelry_Ear_R
-    4300004: Jewelry_Nose
-    4300006: Shinguard_Spikes
-    4300008: Fur_Pauldron_R
-    4300010: Pauldron_Spikes_R
-    4300012: Fur_Pauldron_L
-    4300014: Pauldron_Spikes_L
-    4300016: Bracer_Spikes
-    4300018: Pauldron_R
-    4300020: Poleyn
-    4300022: Skirt
-    4300024: Bracers
-    4300026: Shoes
-    4300028: Poleyn_Spikes
-    4300030: Skirt_Hangers
-    4300032: Pauldron_L
-    4300034: X_Belt_R
-    4300036: Vest
-    4300038: Vest_Belt_1
-    4300040: Vest_Belt_2
-    4300042: Legwraps
-    4300044: Shinguards
-    4300046: OrcFemHair_short
-    4300048: OrcFemHair_hood
-    4300050: OrcFemHair_long
-    4300052: X_Belt_L
-    4300054: Bicep_Wraps
-    4300056: Waist_Wrap
-    4300058: Waist_Wrap_Loops
-    4300060: Pants
-    4300062: Armwraps
-    4300064: Fur_Arm
-    4300066: Fur_Chest
-    4300068: Fur_Skirt
-    4300070: Half_Orc_F_Body
-    4300072: Half_Orc_F_Head
-    4300074: Thigh_Wraps
-    4300076: Fur_Leg
-    4300078: OrcFemHair_ponytail
-    4300080: Half_Orc_Body
-    4300082: Half_Orc_Head
-    4300084: Club004_Club
-    4300086: Club004_Wraps
-    4300088: Club004_Metal
-    4300090: Club004_Spikes
-    4300092: Sword009_Blade
-    4300094: Sword009_Crossbar
-    4300096: Sword009_Handle
-    4300098: Sword009_Spikes
-    4300100: Head
-    7400000: Tpose
-    7400002: Walk
-    7400004: Run
-    7400006: WalkBack
-    7400008: Idle
-    7400010: Idlebreak01
-    7400012: Idlebreak02
-    7400014: IdleToCombatIdle
-    7400016: CombatIdle
-    7400018: CombatIdleToIdle
-    7400020: Taunt
-    7400022: Dodge
-    7400024: Attack1
-    7400026: Attack2
-    7400028: Attack3
-    7400030: Attack4
-    7400032: BlockStart
-    7400034: BlockLoop
-    7400036: BlockHit
-    7400038: BlockEnd
-    7400040: Death
-    7400042: GotHit
-    7400044: CombatIdleBreak
-    9500000: //RootNode
-    13700000: Armwraps
-    13700002: Bicep_Wraps
-    13700004: Bracer_Spikes
-    13700006: Bracers
-    13700008: Fur_Arm
-    13700010: Fur_Chest
-    13700012: Fur_Leg
-    13700014: Fur_Pauldron_L
-    13700016: Fur_Pauldron_R
-    13700018: Fur_Skirt
-    13700020: Half_Orc_F_Body
-    13700022: Half_Orc_F_Head
-    13700024: Jewelry_Ear_L
-    13700026: Jewelry_Ear_R
-    13700028: Jewelry_Nose
-    13700030: Legwraps
-    13700032: OrcFemHair_hood
-    13700034: OrcFemHair_long
-    13700036: OrcFemHair_ponytail
-    13700038: OrcFemHair_short
-    13700040: Pants
-    13700042: Pauldron_L
-    13700044: Pauldron_R
-    13700046: Pauldron_Spikes_L
-    13700048: Pauldron_Spikes_R
-    13700050: Poleyn
-    13700052: Poleyn_Spikes
-    13700054: Shinguard_Spikes
-    13700056: Shinguards
-    13700058: Shoes
-    13700060: Skirt
-    13700062: Skirt_Hangers
-    13700064: Thigh_Wraps
-    13700066: Vest
-    13700068: Vest_Belt_1
-    13700070: Vest_Belt_2
-    13700072: Waist_Wrap
-    13700074: Waist_Wrap_Loops
-    13700076: X_Belt_L
-    13700078: X_Belt_R
-    13700080: Half_Orc_Body
-    13700082: Half_Orc_Head
-    13700084: Club004_Club
-    13700086: Club004_Metal
-    13700088: Club004_Spikes
-    13700090: Club004_Wraps
-    13700092: Sword009_Blade
-    13700094: Sword009_Crossbar
-    13700096: Sword009_Handle
-    13700098: Head
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armwraps
+  - first:
+      1: 100002
+    second: Base HumanHair05
+  - first:
+      1: 100004
+    second: Base HumanHair06
+  - first:
+      1: 100006
+    second: Base HumanHair07
+  - first:
+      1: 100008
+    second: Base HumanHair08
+  - first:
+      1: 100010
+    second: Base HumanHair09
+  - first:
+      1: 100012
+    second: Base HumanHair10
+  - first:
+      1: 100014
+    second: Base HumanHair11
+  - first:
+      1: 100016
+    second: Base HumanHair12
+  - first:
+      1: 100018
+    second: Base HumanHair13
+  - first:
+      1: 100020
+    second: Base HumanHair14
+  - first:
+      1: 100022
+    second: Base HumanHair15
+  - first:
+      1: 100024
+    second: Base HumanHair16
+  - first:
+      1: 100026
+    second: Base HumanHair17
+  - first:
+      1: 100028
+    second: Base HumanHair18
+  - first:
+      1: 100030
+    second: Base HumanHair20
+  - first:
+      1: 100032
+    second: Base HumanHair21
+  - first:
+      1: 100034
+    second: Base HumanHair22
+  - first:
+      1: 100036
+    second: Base HumanHair23
+  - first:
+      1: 100038
+    second: Base HumanHair24
+  - first:
+      1: 100040
+    second: Base HumanHair25
+  - first:
+      1: 100042
+    second: Base HumanHair26
+  - first:
+      1: 100044
+    second: Base HumanHair27
+  - first:
+      1: 100046
+    second: Base HumanHair28
+  - first:
+      1: 100048
+    second: Base HumanHair29
+  - first:
+      1: 100050
+    second: Base HumanHair30
+  - first:
+      1: 100052
+    second: Base HumanHair31
+  - first:
+      1: 100054
+    second: Base HumanHair32
+  - first:
+      1: 100056
+    second: Base HumanHair33
+  - first:
+      1: 100058
+    second: Base HumanHair34
+  - first:
+      1: 100060
+    second: Base HumanHair35
+  - first:
+      1: 100062
+    second: Base HumanHair36
+  - first:
+      1: 100064
+    second: Base HumanHair37
+  - first:
+      1: 100066
+    second: Base HumanHair38
+  - first:
+      1: 100068
+    second: Base HumanHair40
+  - first:
+      1: 100070
+    second: Base HumanHair41
+  - first:
+      1: 100072
+    second: Base HumanHair42
+  - first:
+      1: 100074
+    second: Base HumanHair43
+  - first:
+      1: 100076
+    second: Base HumanHair44
+  - first:
+      1: 100078
+    second: Base HumanHair45
+  - first:
+      1: 100080
+    second: Base HumanHair46
+  - first:
+      1: 100082
+    second: Base HumanHair47
+  - first:
+      1: 100084
+    second: Base HumanHair48
+  - first:
+      1: 100086
+    second: Base HumanHair49
+  - first:
+      1: 100088
+    second: Base HumanHead
+  - first:
+      1: 100090
+    second: Base HumanJaw
+  - first:
+      1: 100092
+    second: Base HumanLCalf
+  - first:
+      1: 100094
+    second: Base HumanLCollarbone
+  - first:
+      1: 100096
+    second: Base HumanLDigit11
+  - first:
+      1: 100098
+    second: Base HumanLDigit12
+  - first:
+      1: 100100
+    second: Base HumanLDigit13
+  - first:
+      1: 100102
+    second: Base HumanLDigit21
+  - first:
+      1: 100104
+    second: Base HumanLDigit22
+  - first:
+      1: 100106
+    second: Base HumanLDigit23
+  - first:
+      1: 100108
+    second: Base HumanLDigit31
+  - first:
+      1: 100110
+    second: Base HumanLDigit32
+  - first:
+      1: 100112
+    second: Base HumanLDigit33
+  - first:
+      1: 100114
+    second: Base HumanLDigit41
+  - first:
+      1: 100116
+    second: Base HumanLDigit42
+  - first:
+      1: 100118
+    second: Base HumanLDigit43
+  - first:
+      1: 100120
+    second: Base HumanLDigit51
+  - first:
+      1: 100122
+    second: Base HumanLDigit52
+  - first:
+      1: 100124
+    second: Base HumanLDigit53
+  - first:
+      1: 100126
+    second: Base HumanLFoot
+  - first:
+      1: 100128
+    second: Base HumanLForearm1
+  - first:
+      1: 100130
+    second: Base HumanLForearm2
+  - first:
+      1: 100132
+    second: Base HumanLForearm3
+  - first:
+      1: 100134
+    second: Base HumanLPalm
+  - first:
+      1: 100136
+    second: Base HumanLThigh1
+  - first:
+      1: 100138
+    second: Base HumanLThigh2
+  - first:
+      1: 100140
+    second: Base HumanLToe11
+  - first:
+      1: 100142
+    second: Base HumanLToe12
+  - first:
+      1: 100144
+    second: Base HumanLUpperarm1
+  - first:
+      1: 100146
+    second: Base HumanLUpperarm2
+  - first:
+      1: 100148
+    second: Base HumanNeck
+  - first:
+      1: 100150
+    second: Base HumanPelvis
+  - first:
+      1: 100152
+    second: Base HumanPonytail1
+  - first:
+      1: 100154
+    second: Base HumanPonytail10
+  - first:
+      1: 100156
+    second: Base HumanPonytail2
+  - first:
+      1: 100158
+    second: Base HumanPonytail3
+  - first:
+      1: 100160
+    second: Base HumanPonytail4
+  - first:
+      1: 100162
+    second: Base HumanPonytail5
+  - first:
+      1: 100164
+    second: Base HumanPonytail6
+  - first:
+      1: 100166
+    second: Base HumanPonytail7
+  - first:
+      1: 100168
+    second: Base HumanPonytail8
+  - first:
+      1: 100170
+    second: Base HumanPonytail9
+  - first:
+      1: 100172
+    second: Base HumanRCalf
+  - first:
+      1: 100174
+    second: Base HumanRCollarbone
+  - first:
+      1: 100176
+    second: Base HumanRDigit11
+  - first:
+      1: 100178
+    second: Base HumanRDigit12
+  - first:
+      1: 100180
+    second: Base HumanRDigit13
+  - first:
+      1: 100182
+    second: Base HumanRDigit21
+  - first:
+      1: 100184
+    second: Base HumanRDigit22
+  - first:
+      1: 100186
+    second: Base HumanRDigit23
+  - first:
+      1: 100188
+    second: Base HumanRDigit31
+  - first:
+      1: 100190
+    second: Base HumanRDigit32
+  - first:
+      1: 100192
+    second: Base HumanRDigit33
+  - first:
+      1: 100194
+    second: Base HumanRDigit41
+  - first:
+      1: 100196
+    second: Base HumanRDigit42
+  - first:
+      1: 100198
+    second: Base HumanRDigit43
+  - first:
+      1: 100200
+    second: Base HumanRDigit51
+  - first:
+      1: 100202
+    second: Base HumanRDigit52
+  - first:
+      1: 100204
+    second: Base HumanRDigit53
+  - first:
+      1: 100206
+    second: Base HumanRFoot
+  - first:
+      1: 100208
+    second: Base HumanRForearm1
+  - first:
+      1: 100210
+    second: Base HumanRForearm2
+  - first:
+      1: 100212
+    second: Base HumanRForearm3
+  - first:
+      1: 100214
+    second: Base HumanRibcage
+  - first:
+      1: 100216
+    second: Base HumanRPalm
+  - first:
+      1: 100218
+    second: Base HumanRThigh1
+  - first:
+      1: 100220
+    second: Base HumanRThigh2
+  - first:
+      1: 100222
+    second: Base HumanRToe11
+  - first:
+      1: 100224
+    second: Base HumanRToe12
+  - first:
+      1: 100226
+    second: Base HumanRUpperarm1
+  - first:
+      1: 100228
+    second: Base HumanRUpperarm2
+  - first:
+      1: 100230
+    second: Base HumanSheathRig
+  - first:
+      1: 100232
+    second: Base HumanSpine1
+  - first:
+      1: 100234
+    second: Base HumanSpine2
+  - first:
+      1: 100236
+    second: Base HumanSpine3
+  - first:
+      1: 100238
+    second: Base HumanTassetRig1
+  - first:
+      1: 100240
+    second: Base HumanTassetRig2
+  - first:
+      1: 100242
+    second: Base HumanTongue1
+  - first:
+      1: 100244
+    second: Base HumanTongue2
+  - first:
+      1: 100246
+    second: Base HumanTongue3
+  - first:
+      1: 100248
+    second: Bicep_Wraps
+  - first:
+      1: 100250
+    second: BoneRoot
+  - first:
+      1: 100252
+    second: Bracer_Spikes
+  - first:
+      1: 100254
+    second: Bracers
+  - first:
+      1: 100256
+    second: DaggerBone
+  - first:
+      1: 100258
+    second: ElfHangers01
+  - first:
+      1: 100260
+    second: ElfHangers02
+  - first:
+      1: 100262
+    second: ElfHangers03
+  - first:
+      1: 100264
+    second: ElfHangers04
+  - first:
+      1: 100266
+    second: ElfHangers05
+  - first:
+      1: 100268
+    second: ElfHangers06
+  - first:
+      1: 100270
+    second: ElfHangersHub
+  - first:
+      1: 100272
+    second: EyeL
+  - first:
+      1: 100274
+    second: EyePointL
+  - first:
+      1: 100276
+    second: EyePointR
+  - first:
+      1: 100278
+    second: EyeR
+  - first:
+      1: 100280
+    second: Fur_Arm
+  - first:
+      1: 100282
+    second: Fur_Chest
+  - first:
+      1: 100284
+    second: Fur_Leg
+  - first:
+      1: 100286
+    second: Fur_Pauldron_L
+  - first:
+      1: 100288
+    second: Fur_Pauldron_R
+  - first:
+      1: 100290
+    second: Fur_Skirt
+  - first:
+      1: 100292
+    second: Half_Orc_F_Body
+  - first:
+      1: 100294
+    second: Half_Orc_F_Head
+  - first:
+      1: 100296
+    second: //RootNode
+  - first:
+      1: 100298
+    second: HandBoneL
+  - first:
+      1: 100300
+    second: HandBoneR
+  - first:
+      1: 100302
+    second: Jewelry_Ear_L
+  - first:
+      1: 100304
+    second: Jewelry_Ear_R
+  - first:
+      1: 100306
+    second: Jewelry_Nose
+  - first:
+      1: 100308
+    second: L_eyelid_lower
+  - first:
+      1: 100310
+    second: L_eyelid_top
+  - first:
+      1: 100312
+    second: Legwraps
+  - first:
+      1: 100314
+    second: OrcFemHair_hood
+  - first:
+      1: 100316
+    second: OrcFemHair_long
+  - first:
+      1: 100318
+    second: OrcFemHair_ponytail
+  - first:
+      1: 100320
+    second: OrcFemHair_short
+  - first:
+      1: 100322
+    second: Pants
+  - first:
+      1: 100324
+    second: Pauldron_L
+  - first:
+      1: 100326
+    second: Pauldron_R
+  - first:
+      1: 100328
+    second: Pauldron_Spikes_L
+  - first:
+      1: 100330
+    second: Pauldron_Spikes_R
+  - first:
+      1: 100332
+    second: Poleyn
+  - first:
+      1: 100334
+    second: Poleyn_Spikes
+  - first:
+      1: 100336
+    second: R_eyelid_lower
+  - first:
+      1: 100338
+    second: R_eyelid_top
+  - first:
+      1: 100340
+    second: ShieldBoneL
+  - first:
+      1: 100342
+    second: ShieldBoneR
+  - first:
+      1: 100344
+    second: Shinguard_Spikes
+  - first:
+      1: 100346
+    second: Shinguards
+  - first:
+      1: 100348
+    second: Shoes
+  - first:
+      1: 100350
+    second: Skirt
+  - first:
+      1: 100352
+    second: Skirt_Hangers
+  - first:
+      1: 100354
+    second: SkirtRigHub
+  - first:
+      1: 100356
+    second: SkirtRigSkirt01
+  - first:
+      1: 100358
+    second: SkirtRigSkirt02
+  - first:
+      1: 100360
+    second: SkirtRigSkirt03
+  - first:
+      1: 100362
+    second: SkirtRigSkirt04
+  - first:
+      1: 100364
+    second: SkirtRigSkirt05
+  - first:
+      1: 100366
+    second: SkirtRigSkirt06
+  - first:
+      1: 100368
+    second: SkirtRigSkirt07
+  - first:
+      1: 100370
+    second: SkirtRigSkirt08
+  - first:
+      1: 100372
+    second: SkirtRigSkirt09
+  - first:
+      1: 100374
+    second: SkirtRigSkirt10
+  - first:
+      1: 100376
+    second: SkirtRigSkirt11
+  - first:
+      1: 100378
+    second: SkirtRigSkirt12
+  - first:
+      1: 100380
+    second: SkirtRigSkirt13
+  - first:
+      1: 100382
+    second: SkirtRigSkirt14
+  - first:
+      1: 100384
+    second: SkirtRigSkirt15
+  - first:
+      1: 100386
+    second: SkirtRigSkirt16
+  - first:
+      1: 100388
+    second: SkirtRigSkirt17
+  - first:
+      1: 100390
+    second: SkirtRigSkirt18
+  - first:
+      1: 100392
+    second: SkirtRigSkirt19
+  - first:
+      1: 100394
+    second: SkirtRigSkirt20
+  - first:
+      1: 100396
+    second: SkirtRigSkirt21
+  - first:
+      1: 100398
+    second: SkirtRigSkirt22
+  - first:
+      1: 100400
+    second: SkirtRigSkirt23
+  - first:
+      1: 100402
+    second: SkirtRigSkirt24
+  - first:
+      1: 100404
+    second: Thigh_Wraps
+  - first:
+      1: 100406
+    second: Vest
+  - first:
+      1: 100408
+    second: Vest_Belt_1
+  - first:
+      1: 100410
+    second: Vest_Belt_2
+  - first:
+      1: 100412
+    second: Waist_Wrap
+  - first:
+      1: 100414
+    second: Waist_Wrap_Loops
+  - first:
+      1: 100416
+    second: X_Belt_L
+  - first:
+      1: 100418
+    second: X_Belt_R
+  - first:
+      1: 100420
+    second: SpearBone
+  - first:
+      1: 100422
+    second: Half_Orc_Body
+  - first:
+      1: 100424
+    second: Half_Orc_Head
+  - first:
+      1: 100426
+    second: Club
+  - first:
+      1: 100428
+    second: Club004_Club
+  - first:
+      1: 100430
+    second: Club004_Metal
+  - first:
+      1: 100432
+    second: Club004_Spikes
+  - first:
+      1: 100434
+    second: Club004_Wraps
+  - first:
+      1: 100436
+    second: Sword
+  - first:
+      1: 100438
+    second: Sword009_Blade
+  - first:
+      1: 100440
+    second: Sword009_Crossbar
+  - first:
+      1: 100442
+    second: Sword009_Handle
+  - first:
+      1: 100444
+    second: Sword009_Spikes
+  - first:
+      1: 100446
+    second: Head
+  - first:
+      1: 100448
+    second: SkirtRig
+  - first:
+      4: 400000
+    second: Armwraps
+  - first:
+      4: 400002
+    second: Base HumanHair05
+  - first:
+      4: 400004
+    second: Base HumanHair06
+  - first:
+      4: 400006
+    second: Base HumanHair07
+  - first:
+      4: 400008
+    second: Base HumanHair08
+  - first:
+      4: 400010
+    second: Base HumanHair09
+  - first:
+      4: 400012
+    second: Base HumanHair10
+  - first:
+      4: 400014
+    second: Base HumanHair11
+  - first:
+      4: 400016
+    second: Base HumanHair12
+  - first:
+      4: 400018
+    second: Base HumanHair13
+  - first:
+      4: 400020
+    second: Base HumanHair14
+  - first:
+      4: 400022
+    second: Base HumanHair15
+  - first:
+      4: 400024
+    second: Base HumanHair16
+  - first:
+      4: 400026
+    second: Base HumanHair17
+  - first:
+      4: 400028
+    second: Base HumanHair18
+  - first:
+      4: 400030
+    second: Base HumanHair20
+  - first:
+      4: 400032
+    second: Base HumanHair21
+  - first:
+      4: 400034
+    second: Base HumanHair22
+  - first:
+      4: 400036
+    second: Base HumanHair23
+  - first:
+      4: 400038
+    second: Base HumanHair24
+  - first:
+      4: 400040
+    second: Base HumanHair25
+  - first:
+      4: 400042
+    second: Base HumanHair26
+  - first:
+      4: 400044
+    second: Base HumanHair27
+  - first:
+      4: 400046
+    second: Base HumanHair28
+  - first:
+      4: 400048
+    second: Base HumanHair29
+  - first:
+      4: 400050
+    second: Base HumanHair30
+  - first:
+      4: 400052
+    second: Base HumanHair31
+  - first:
+      4: 400054
+    second: Base HumanHair32
+  - first:
+      4: 400056
+    second: Base HumanHair33
+  - first:
+      4: 400058
+    second: Base HumanHair34
+  - first:
+      4: 400060
+    second: Base HumanHair35
+  - first:
+      4: 400062
+    second: Base HumanHair36
+  - first:
+      4: 400064
+    second: Base HumanHair37
+  - first:
+      4: 400066
+    second: Base HumanHair38
+  - first:
+      4: 400068
+    second: Base HumanHair40
+  - first:
+      4: 400070
+    second: Base HumanHair41
+  - first:
+      4: 400072
+    second: Base HumanHair42
+  - first:
+      4: 400074
+    second: Base HumanHair43
+  - first:
+      4: 400076
+    second: Base HumanHair44
+  - first:
+      4: 400078
+    second: Base HumanHair45
+  - first:
+      4: 400080
+    second: Base HumanHair46
+  - first:
+      4: 400082
+    second: Base HumanHair47
+  - first:
+      4: 400084
+    second: Base HumanHair48
+  - first:
+      4: 400086
+    second: Base HumanHair49
+  - first:
+      4: 400088
+    second: Base HumanHead
+  - first:
+      4: 400090
+    second: Base HumanJaw
+  - first:
+      4: 400092
+    second: Base HumanLCalf
+  - first:
+      4: 400094
+    second: Base HumanLCollarbone
+  - first:
+      4: 400096
+    second: Base HumanLDigit11
+  - first:
+      4: 400098
+    second: Base HumanLDigit12
+  - first:
+      4: 400100
+    second: Base HumanLDigit13
+  - first:
+      4: 400102
+    second: Base HumanLDigit21
+  - first:
+      4: 400104
+    second: Base HumanLDigit22
+  - first:
+      4: 400106
+    second: Base HumanLDigit23
+  - first:
+      4: 400108
+    second: Base HumanLDigit31
+  - first:
+      4: 400110
+    second: Base HumanLDigit32
+  - first:
+      4: 400112
+    second: Base HumanLDigit33
+  - first:
+      4: 400114
+    second: Base HumanLDigit41
+  - first:
+      4: 400116
+    second: Base HumanLDigit42
+  - first:
+      4: 400118
+    second: Base HumanLDigit43
+  - first:
+      4: 400120
+    second: Base HumanLDigit51
+  - first:
+      4: 400122
+    second: Base HumanLDigit52
+  - first:
+      4: 400124
+    second: Base HumanLDigit53
+  - first:
+      4: 400126
+    second: Base HumanLFoot
+  - first:
+      4: 400128
+    second: Base HumanLForearm1
+  - first:
+      4: 400130
+    second: Base HumanLForearm2
+  - first:
+      4: 400132
+    second: Base HumanLForearm3
+  - first:
+      4: 400134
+    second: Base HumanLPalm
+  - first:
+      4: 400136
+    second: Base HumanLThigh1
+  - first:
+      4: 400138
+    second: Base HumanLThigh2
+  - first:
+      4: 400140
+    second: Base HumanLToe11
+  - first:
+      4: 400142
+    second: Base HumanLToe12
+  - first:
+      4: 400144
+    second: Base HumanLUpperarm1
+  - first:
+      4: 400146
+    second: Base HumanLUpperarm2
+  - first:
+      4: 400148
+    second: Base HumanNeck
+  - first:
+      4: 400150
+    second: Base HumanPelvis
+  - first:
+      4: 400152
+    second: Base HumanPonytail1
+  - first:
+      4: 400154
+    second: Base HumanPonytail10
+  - first:
+      4: 400156
+    second: Base HumanPonytail2
+  - first:
+      4: 400158
+    second: Base HumanPonytail3
+  - first:
+      4: 400160
+    second: Base HumanPonytail4
+  - first:
+      4: 400162
+    second: Base HumanPonytail5
+  - first:
+      4: 400164
+    second: Base HumanPonytail6
+  - first:
+      4: 400166
+    second: Base HumanPonytail7
+  - first:
+      4: 400168
+    second: Base HumanPonytail8
+  - first:
+      4: 400170
+    second: Base HumanPonytail9
+  - first:
+      4: 400172
+    second: Base HumanRCalf
+  - first:
+      4: 400174
+    second: Base HumanRCollarbone
+  - first:
+      4: 400176
+    second: Base HumanRDigit11
+  - first:
+      4: 400178
+    second: Base HumanRDigit12
+  - first:
+      4: 400180
+    second: Base HumanRDigit13
+  - first:
+      4: 400182
+    second: Base HumanRDigit21
+  - first:
+      4: 400184
+    second: Base HumanRDigit22
+  - first:
+      4: 400186
+    second: Base HumanRDigit23
+  - first:
+      4: 400188
+    second: Base HumanRDigit31
+  - first:
+      4: 400190
+    second: Base HumanRDigit32
+  - first:
+      4: 400192
+    second: Base HumanRDigit33
+  - first:
+      4: 400194
+    second: Base HumanRDigit41
+  - first:
+      4: 400196
+    second: Base HumanRDigit42
+  - first:
+      4: 400198
+    second: Base HumanRDigit43
+  - first:
+      4: 400200
+    second: Base HumanRDigit51
+  - first:
+      4: 400202
+    second: Base HumanRDigit52
+  - first:
+      4: 400204
+    second: Base HumanRDigit53
+  - first:
+      4: 400206
+    second: Base HumanRFoot
+  - first:
+      4: 400208
+    second: Base HumanRForearm1
+  - first:
+      4: 400210
+    second: Base HumanRForearm2
+  - first:
+      4: 400212
+    second: Base HumanRForearm3
+  - first:
+      4: 400214
+    second: Base HumanRibcage
+  - first:
+      4: 400216
+    second: Base HumanRPalm
+  - first:
+      4: 400218
+    second: Base HumanRThigh1
+  - first:
+      4: 400220
+    second: Base HumanRThigh2
+  - first:
+      4: 400222
+    second: Base HumanRToe11
+  - first:
+      4: 400224
+    second: Base HumanRToe12
+  - first:
+      4: 400226
+    second: Base HumanRUpperarm1
+  - first:
+      4: 400228
+    second: Base HumanRUpperarm2
+  - first:
+      4: 400230
+    second: Base HumanSheathRig
+  - first:
+      4: 400232
+    second: Base HumanSpine1
+  - first:
+      4: 400234
+    second: Base HumanSpine2
+  - first:
+      4: 400236
+    second: Base HumanSpine3
+  - first:
+      4: 400238
+    second: Base HumanTassetRig1
+  - first:
+      4: 400240
+    second: Base HumanTassetRig2
+  - first:
+      4: 400242
+    second: Base HumanTongue1
+  - first:
+      4: 400244
+    second: Base HumanTongue2
+  - first:
+      4: 400246
+    second: Base HumanTongue3
+  - first:
+      4: 400248
+    second: Bicep_Wraps
+  - first:
+      4: 400250
+    second: BoneRoot
+  - first:
+      4: 400252
+    second: Bracer_Spikes
+  - first:
+      4: 400254
+    second: Bracers
+  - first:
+      4: 400256
+    second: DaggerBone
+  - first:
+      4: 400258
+    second: ElfHangers01
+  - first:
+      4: 400260
+    second: ElfHangers02
+  - first:
+      4: 400262
+    second: ElfHangers03
+  - first:
+      4: 400264
+    second: ElfHangers04
+  - first:
+      4: 400266
+    second: ElfHangers05
+  - first:
+      4: 400268
+    second: ElfHangers06
+  - first:
+      4: 400270
+    second: ElfHangersHub
+  - first:
+      4: 400272
+    second: EyeL
+  - first:
+      4: 400274
+    second: EyePointL
+  - first:
+      4: 400276
+    second: EyePointR
+  - first:
+      4: 400278
+    second: EyeR
+  - first:
+      4: 400280
+    second: Fur_Arm
+  - first:
+      4: 400282
+    second: Fur_Chest
+  - first:
+      4: 400284
+    second: Fur_Leg
+  - first:
+      4: 400286
+    second: Fur_Pauldron_L
+  - first:
+      4: 400288
+    second: Fur_Pauldron_R
+  - first:
+      4: 400290
+    second: Fur_Skirt
+  - first:
+      4: 400292
+    second: Half_Orc_F_Body
+  - first:
+      4: 400294
+    second: Half_Orc_F_Head
+  - first:
+      4: 400296
+    second: //RootNode
+  - first:
+      4: 400298
+    second: HandBoneL
+  - first:
+      4: 400300
+    second: HandBoneR
+  - first:
+      4: 400302
+    second: Jewelry_Ear_L
+  - first:
+      4: 400304
+    second: Jewelry_Ear_R
+  - first:
+      4: 400306
+    second: Jewelry_Nose
+  - first:
+      4: 400308
+    second: L_eyelid_lower
+  - first:
+      4: 400310
+    second: L_eyelid_top
+  - first:
+      4: 400312
+    second: Legwraps
+  - first:
+      4: 400314
+    second: OrcFemHair_hood
+  - first:
+      4: 400316
+    second: OrcFemHair_long
+  - first:
+      4: 400318
+    second: OrcFemHair_ponytail
+  - first:
+      4: 400320
+    second: OrcFemHair_short
+  - first:
+      4: 400322
+    second: Pants
+  - first:
+      4: 400324
+    second: Pauldron_L
+  - first:
+      4: 400326
+    second: Pauldron_R
+  - first:
+      4: 400328
+    second: Pauldron_Spikes_L
+  - first:
+      4: 400330
+    second: Pauldron_Spikes_R
+  - first:
+      4: 400332
+    second: Poleyn
+  - first:
+      4: 400334
+    second: Poleyn_Spikes
+  - first:
+      4: 400336
+    second: R_eyelid_lower
+  - first:
+      4: 400338
+    second: R_eyelid_top
+  - first:
+      4: 400340
+    second: ShieldBoneL
+  - first:
+      4: 400342
+    second: ShieldBoneR
+  - first:
+      4: 400344
+    second: Shinguard_Spikes
+  - first:
+      4: 400346
+    second: Shinguards
+  - first:
+      4: 400348
+    second: Shoes
+  - first:
+      4: 400350
+    second: Skirt
+  - first:
+      4: 400352
+    second: Skirt_Hangers
+  - first:
+      4: 400354
+    second: SkirtRigHub
+  - first:
+      4: 400356
+    second: SkirtRigSkirt01
+  - first:
+      4: 400358
+    second: SkirtRigSkirt02
+  - first:
+      4: 400360
+    second: SkirtRigSkirt03
+  - first:
+      4: 400362
+    second: SkirtRigSkirt04
+  - first:
+      4: 400364
+    second: SkirtRigSkirt05
+  - first:
+      4: 400366
+    second: SkirtRigSkirt06
+  - first:
+      4: 400368
+    second: SkirtRigSkirt07
+  - first:
+      4: 400370
+    second: SkirtRigSkirt08
+  - first:
+      4: 400372
+    second: SkirtRigSkirt09
+  - first:
+      4: 400374
+    second: SkirtRigSkirt10
+  - first:
+      4: 400376
+    second: SkirtRigSkirt11
+  - first:
+      4: 400378
+    second: SkirtRigSkirt12
+  - first:
+      4: 400380
+    second: SkirtRigSkirt13
+  - first:
+      4: 400382
+    second: SkirtRigSkirt14
+  - first:
+      4: 400384
+    second: SkirtRigSkirt15
+  - first:
+      4: 400386
+    second: SkirtRigSkirt16
+  - first:
+      4: 400388
+    second: SkirtRigSkirt17
+  - first:
+      4: 400390
+    second: SkirtRigSkirt18
+  - first:
+      4: 400392
+    second: SkirtRigSkirt19
+  - first:
+      4: 400394
+    second: SkirtRigSkirt20
+  - first:
+      4: 400396
+    second: SkirtRigSkirt21
+  - first:
+      4: 400398
+    second: SkirtRigSkirt22
+  - first:
+      4: 400400
+    second: SkirtRigSkirt23
+  - first:
+      4: 400402
+    second: SkirtRigSkirt24
+  - first:
+      4: 400404
+    second: Thigh_Wraps
+  - first:
+      4: 400406
+    second: Vest
+  - first:
+      4: 400408
+    second: Vest_Belt_1
+  - first:
+      4: 400410
+    second: Vest_Belt_2
+  - first:
+      4: 400412
+    second: Waist_Wrap
+  - first:
+      4: 400414
+    second: Waist_Wrap_Loops
+  - first:
+      4: 400416
+    second: X_Belt_L
+  - first:
+      4: 400418
+    second: X_Belt_R
+  - first:
+      4: 400420
+    second: SpearBone
+  - first:
+      4: 400422
+    second: Half_Orc_Body
+  - first:
+      4: 400424
+    second: Half_Orc_Head
+  - first:
+      4: 400426
+    second: Club
+  - first:
+      4: 400428
+    second: Club004_Club
+  - first:
+      4: 400430
+    second: Club004_Metal
+  - first:
+      4: 400432
+    second: Club004_Spikes
+  - first:
+      4: 400434
+    second: Club004_Wraps
+  - first:
+      4: 400436
+    second: Sword
+  - first:
+      4: 400438
+    second: Sword009_Blade
+  - first:
+      4: 400440
+    second: Sword009_Crossbar
+  - first:
+      4: 400442
+    second: Sword009_Handle
+  - first:
+      4: 400444
+    second: Sword009_Spikes
+  - first:
+      4: 400446
+    second: Head
+  - first:
+      4: 400448
+    second: SkirtRig
+  - first:
+      21: 2100000
+    second: jewelry
+  - first:
+      21: 2100002
+    second: Material #165
+  - first:
+      21: 2100004
+    second: fur
+  - first:
+      21: 2100006
+    second: bracers
+  - first:
+      21: 2100008
+    second: skirt
+  - first:
+      21: 2100010
+    second: pants
+  - first:
+      21: 2100012
+    second: Material #195
+  - first:
+      21: 2100014
+    second: TorsoBelts
+  - first:
+      21: 2100016
+    second: Material #167
+  - first:
+      21: 2100018
+    second: legwraps
+  - first:
+      21: 2100020
+    second: hair
+  - first:
+      21: 2100022
+    second: armwraps
+  - first:
+      21: 2100024
+    second: Orc_F_Head
+  - first:
+      21: 2100026
+    second: OrcEyebrows
+  - first:
+      21: 2100028
+    second: Eyeshine
+  - first:
+      21: 2100030
+    second: club_low_lambert1
+  - first:
+      21: 2100032
+    second: sword009_set
+  - first:
+      21: 2100034
+    second: Eyes_mat
+  - first:
+      21: 2100036
+    second: Mouth_mat
+  - first:
+      23: 2300000
+    second: Sword009_Spikes
+  - first:
+      23: 2300002
+    second: Club004_Club
+  - first:
+      23: 2300004
+    second: Club004_Metal
+  - first:
+      23: 2300006
+    second: Club004_Spikes
+  - first:
+      23: 2300008
+    second: Club004_Wraps
+  - first:
+      23: 2300010
+    second: Sword009_Blade
+  - first:
+      23: 2300012
+    second: Sword009_Crossbar
+  - first:
+      23: 2300014
+    second: Sword009_Handle
+  - first:
+      33: 3300000
+    second: Sword009_Spikes
+  - first:
+      33: 3300002
+    second: Club004_Club
+  - first:
+      33: 3300004
+    second: Club004_Metal
+  - first:
+      33: 3300006
+    second: Club004_Spikes
+  - first:
+      33: 3300008
+    second: Club004_Wraps
+  - first:
+      33: 3300010
+    second: Sword009_Blade
+  - first:
+      33: 3300012
+    second: Sword009_Crossbar
+  - first:
+      33: 3300014
+    second: Sword009_Handle
+  - first:
+      43: 4300000
+    second: Jewelry_Ear_L
+  - first:
+      43: 4300002
+    second: Jewelry_Ear_R
+  - first:
+      43: 4300004
+    second: Jewelry_Nose
+  - first:
+      43: 4300006
+    second: Shinguard_Spikes
+  - first:
+      43: 4300008
+    second: Fur_Pauldron_R
+  - first:
+      43: 4300010
+    second: Pauldron_Spikes_R
+  - first:
+      43: 4300012
+    second: Fur_Pauldron_L
+  - first:
+      43: 4300014
+    second: Pauldron_Spikes_L
+  - first:
+      43: 4300016
+    second: Bracer_Spikes
+  - first:
+      43: 4300018
+    second: Pauldron_R
+  - first:
+      43: 4300020
+    second: Poleyn
+  - first:
+      43: 4300022
+    second: Skirt
+  - first:
+      43: 4300024
+    second: Bracers
+  - first:
+      43: 4300026
+    second: Shoes
+  - first:
+      43: 4300028
+    second: Poleyn_Spikes
+  - first:
+      43: 4300030
+    second: Skirt_Hangers
+  - first:
+      43: 4300032
+    second: Pauldron_L
+  - first:
+      43: 4300034
+    second: X_Belt_R
+  - first:
+      43: 4300036
+    second: Vest
+  - first:
+      43: 4300038
+    second: Vest_Belt_1
+  - first:
+      43: 4300040
+    second: Vest_Belt_2
+  - first:
+      43: 4300042
+    second: Legwraps
+  - first:
+      43: 4300044
+    second: Shinguards
+  - first:
+      43: 4300046
+    second: OrcFemHair_short
+  - first:
+      43: 4300048
+    second: OrcFemHair_hood
+  - first:
+      43: 4300050
+    second: OrcFemHair_long
+  - first:
+      43: 4300052
+    second: X_Belt_L
+  - first:
+      43: 4300054
+    second: Bicep_Wraps
+  - first:
+      43: 4300056
+    second: Waist_Wrap
+  - first:
+      43: 4300058
+    second: Waist_Wrap_Loops
+  - first:
+      43: 4300060
+    second: Pants
+  - first:
+      43: 4300062
+    second: Armwraps
+  - first:
+      43: 4300064
+    second: Fur_Arm
+  - first:
+      43: 4300066
+    second: Fur_Chest
+  - first:
+      43: 4300068
+    second: Fur_Skirt
+  - first:
+      43: 4300070
+    second: Half_Orc_F_Body
+  - first:
+      43: 4300072
+    second: Half_Orc_F_Head
+  - first:
+      43: 4300074
+    second: Thigh_Wraps
+  - first:
+      43: 4300076
+    second: Fur_Leg
+  - first:
+      43: 4300078
+    second: OrcFemHair_ponytail
+  - first:
+      43: 4300080
+    second: Half_Orc_Body
+  - first:
+      43: 4300082
+    second: Half_Orc_Head
+  - first:
+      43: 4300084
+    second: Club004_Club
+  - first:
+      43: 4300086
+    second: Club004_Wraps
+  - first:
+      43: 4300088
+    second: Club004_Metal
+  - first:
+      43: 4300090
+    second: Club004_Spikes
+  - first:
+      43: 4300092
+    second: Sword009_Blade
+  - first:
+      43: 4300094
+    second: Sword009_Crossbar
+  - first:
+      43: 4300096
+    second: Sword009_Handle
+  - first:
+      43: 4300098
+    second: Sword009_Spikes
+  - first:
+      43: 4300100
+    second: Head
+  - first:
+      74: 7400000
+    second: Tpose
+  - first:
+      74: 7400002
+    second: Walk
+  - first:
+      74: 7400004
+    second: Run
+  - first:
+      74: 7400006
+    second: WalkBack
+  - first:
+      74: 7400008
+    second: Idle
+  - first:
+      74: 7400010
+    second: Idlebreak01
+  - first:
+      74: 7400012
+    second: Idlebreak02
+  - first:
+      74: 7400014
+    second: IdleToCombatIdle
+  - first:
+      74: 7400016
+    second: CombatIdle
+  - first:
+      74: 7400018
+    second: CombatIdleToIdle
+  - first:
+      74: 7400020
+    second: Taunt
+  - first:
+      74: 7400022
+    second: Dodge
+  - first:
+      74: 7400024
+    second: Attack1
+  - first:
+      74: 7400026
+    second: Attack2
+  - first:
+      74: 7400028
+    second: Attack3
+  - first:
+      74: 7400030
+    second: Attack4
+  - first:
+      74: 7400032
+    second: BlockStart
+  - first:
+      74: 7400034
+    second: BlockLoop
+  - first:
+      74: 7400036
+    second: BlockHit
+  - first:
+      74: 7400038
+    second: BlockEnd
+  - first:
+      74: 7400040
+    second: Death
+  - first:
+      74: 7400042
+    second: GotHit
+  - first:
+      74: 7400044
+    second: CombatIdleBreak
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Armwraps
+  - first:
+      137: 13700002
+    second: Bicep_Wraps
+  - first:
+      137: 13700004
+    second: Bracer_Spikes
+  - first:
+      137: 13700006
+    second: Bracers
+  - first:
+      137: 13700008
+    second: Fur_Arm
+  - first:
+      137: 13700010
+    second: Fur_Chest
+  - first:
+      137: 13700012
+    second: Fur_Leg
+  - first:
+      137: 13700014
+    second: Fur_Pauldron_L
+  - first:
+      137: 13700016
+    second: Fur_Pauldron_R
+  - first:
+      137: 13700018
+    second: Fur_Skirt
+  - first:
+      137: 13700020
+    second: Half_Orc_F_Body
+  - first:
+      137: 13700022
+    second: Half_Orc_F_Head
+  - first:
+      137: 13700024
+    second: Jewelry_Ear_L
+  - first:
+      137: 13700026
+    second: Jewelry_Ear_R
+  - first:
+      137: 13700028
+    second: Jewelry_Nose
+  - first:
+      137: 13700030
+    second: Legwraps
+  - first:
+      137: 13700032
+    second: OrcFemHair_hood
+  - first:
+      137: 13700034
+    second: OrcFemHair_long
+  - first:
+      137: 13700036
+    second: OrcFemHair_ponytail
+  - first:
+      137: 13700038
+    second: OrcFemHair_short
+  - first:
+      137: 13700040
+    second: Pants
+  - first:
+      137: 13700042
+    second: Pauldron_L
+  - first:
+      137: 13700044
+    second: Pauldron_R
+  - first:
+      137: 13700046
+    second: Pauldron_Spikes_L
+  - first:
+      137: 13700048
+    second: Pauldron_Spikes_R
+  - first:
+      137: 13700050
+    second: Poleyn
+  - first:
+      137: 13700052
+    second: Poleyn_Spikes
+  - first:
+      137: 13700054
+    second: Shinguard_Spikes
+  - first:
+      137: 13700056
+    second: Shinguards
+  - first:
+      137: 13700058
+    second: Shoes
+  - first:
+      137: 13700060
+    second: Skirt
+  - first:
+      137: 13700062
+    second: Skirt_Hangers
+  - first:
+      137: 13700064
+    second: Thigh_Wraps
+  - first:
+      137: 13700066
+    second: Vest
+  - first:
+      137: 13700068
+    second: Vest_Belt_1
+  - first:
+      137: 13700070
+    second: Vest_Belt_2
+  - first:
+      137: 13700072
+    second: Waist_Wrap
+  - first:
+      137: 13700074
+    second: Waist_Wrap_Loops
+  - first:
+      137: 13700076
+    second: X_Belt_L
+  - first:
+      137: 13700078
+    second: X_Belt_R
+  - first:
+      137: 13700080
+    second: Half_Orc_Body
+  - first:
+      137: 13700082
+    second: Half_Orc_Head
+  - first:
+      137: 13700084
+    second: Club004_Club
+  - first:
+      137: 13700086
+    second: Club004_Metal
+  - first:
+      137: 13700088
+    second: Club004_Spikes
+  - first:
+      137: 13700090
+    second: Club004_Wraps
+  - first:
+      137: 13700092
+    second: Sword009_Blade
+  - first:
+      137: 13700094
+    second: Sword009_Crossbar
+  - first:
+      137: 13700096
+    second: Sword009_Handle
+  - first:
+      137: 13700098
+    second: Head
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -623,17 +1845,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #165'
+      name: Material #165
     second: {fileID: 2100000, guid: 06c74f1dd85324555aa9bac04cfd4286, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #167'
+      name: Material #167
     second: {fileID: 2100000, guid: 01815db1b187f4f8ba4a3b8e82b565e1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #195'
+      name: Material #195
     second: {fileID: 2100000, guid: 633976f4c10554186913f528e4dd8749, type: 2}
   - first:
       type: UnityEngine:Material
@@ -691,7 +1913,7 @@ ModelImporter:
       name: skirt
     second: {fileID: 2100000, guid: 633976f4c10554186913f528e4dd8749, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -705,38 +1927,38 @@ ModelImporter:
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Base HumanRThigh2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Base HumanRCalf' has
-      scale animation that will be discarded.\n\t'Base HumanRFoot' has scale animation
-      that will be discarded.\n\t'Base HumanRToe11' has scale animation that will
-      be discarded.\n\t'Base HumanRibcage' is inbetween humanoid transforms and has
-      rotation animation that will be discarded.\n\t'Base HumanLUpperarm2' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Base HumanRThigh2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Base HumanRCalf'
+      has scale animation that will be discarded.\n\t'Base HumanRFoot' has scale
+      animation that will be discarded.\n\t'Base HumanRToe11' has scale animation
+      that will be discarded.\n\t'Base HumanRibcage' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Base HumanLUpperarm2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
       HumanLForearm1' has scale animation that will be discarded.\n\t'Base HumanLForearm2'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
       HumanLForearm3' is inbetween humanoid transforms and has rotation animation
-      that will be discarded.\n\t'Base HumanLPalm' has scale animation that will be
-      discarded.\n\t'Base HumanLDigit11' has translation animation that will be discarded.\n\t'Base
-      HumanLDigit11' has scale animation that will be discarded.\n\t'Base HumanLDigit12'
-      has scale animation that will be discarded.\n\t'Base HumanLDigit13' has scale
-      animation that will be discarded.\n\t'Base HumanLDigit21' has scale animation
-      that will be discarded.\n\t'Base HumanLDigit22' has scale animation that will
-      be discarded.\n\t'Base HumanLDigit23' has scale animation that will be discarded.\n\t'Base
-      HumanLDigit31' has scale animation that will be discarded.\n\t'Base HumanLDigit32'
-      has scale animation that will be discarded.\n\t'Base HumanLDigit33' has scale
-      animation that will be discarded.\n\t'Base HumanLDigit41' has scale animation
-      that will be discarded.\n\t'Base HumanLDigit42' has scale animation that will
-      be discarded.\n\t'Base HumanLDigit43' has scale animation that will be discarded.\n\t'Base
-      HumanLDigit51' has scale animation that will be discarded.\n\t'Base HumanLDigit52'
-      has scale animation that will be discarded.\n\t'Base HumanLDigit53' has scale
-      animation that will be discarded.\n\t'Base HumanRUpperarm2' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'Base HumanRForearm1'
-      has scale animation that will be discarded.\n\t'Base HumanRForearm2' is inbetween
+      that will be discarded.\n\t'Base HumanLPalm' has scale animation that will
+      be discarded.\n\t'Base HumanLDigit11' has translation animation that will be
+      discarded.\n\t'Base HumanLDigit11' has scale animation that will be discarded.\n\t'Base
+      HumanLDigit12' has scale animation that will be discarded.\n\t'Base HumanLDigit13'
+      has scale animation that will be discarded.\n\t'Base HumanLDigit21' has scale
+      animation that will be discarded.\n\t'Base HumanLDigit22' has scale animation
+      that will be discarded.\n\t'Base HumanLDigit23' has scale animation that will
+      be discarded.\n\t'Base HumanLDigit31' has scale animation that will be discarded.\n\t'Base
+      HumanLDigit32' has scale animation that will be discarded.\n\t'Base HumanLDigit33'
+      has scale animation that will be discarded.\n\t'Base HumanLDigit41' has scale
+      animation that will be discarded.\n\t'Base HumanLDigit42' has scale animation
+      that will be discarded.\n\t'Base HumanLDigit43' has scale animation that will
+      be discarded.\n\t'Base HumanLDigit51' has scale animation that will be discarded.\n\t'Base
+      HumanLDigit52' has scale animation that will be discarded.\n\t'Base HumanLDigit53'
+      has scale animation that will be discarded.\n\t'Base HumanRUpperarm2' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      HumanRForearm1' has scale animation that will be discarded.\n\t'Base HumanRForearm2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
       HumanRForearm3' is inbetween humanoid transforms and has rotation animation
-      that will be discarded.\n\t'Base HumanRPalm' has scale animation that will be
-      discarded.\n\t'Base HumanRDigit11' has scale animation that will be discarded.\n\t'Base
+      that will be discarded.\n\t'Base HumanRPalm' has scale animation that will
+      be discarded.\n\t'Base HumanRDigit11' has scale animation that will be discarded.\n\t'Base
       HumanRDigit12' has translation animation that will be discarded.\n\t'Base HumanRDigit12'
       has scale animation that will be discarded.\n\t'Base HumanRDigit13' has translation
       animation that will be discarded.\n\t'Base HumanRDigit13' has scale animation
@@ -770,6 +1992,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tpose
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 10
       wrapMode: 0
@@ -783,7 +2006,7 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
       heightFromFeet: 0
@@ -798,6 +2021,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Take 001
+      internalID: 0
       firstFrame: 50
       lastFrame: 85
       wrapMode: 0
@@ -808,10 +2032,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -834,31 +2058,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -1471,6 +2697,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Run
       takeName: Take 001
+      internalID: 0
       firstFrame: 120
       lastFrame: 140
       wrapMode: 0
@@ -1507,31 +2734,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -2144,6 +3373,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WalkBack
       takeName: Take 001
+      internalID: 0
       firstFrame: 160
       lastFrame: 193
       wrapMode: 0
@@ -2180,31 +3410,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -2817,6 +4049,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Take 001
+      internalID: 0
       firstFrame: 250
       lastFrame: 470
       wrapMode: 0
@@ -2853,31 +4086,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -3490,6 +4725,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idlebreak01
       takeName: Take 001
+      internalID: 0
       firstFrame: 470
       lastFrame: 610
       wrapMode: 0
@@ -3526,31 +4762,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -4163,6 +5401,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idlebreak02
       takeName: Take 001
+      internalID: 0
       firstFrame: 665
       lastFrame: 850
       wrapMode: 0
@@ -4199,31 +5438,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -4836,6 +6077,7 @@ ModelImporter:
     - serializedVersion: 16
       name: IdleToCombatIdle
       takeName: Take 001
+      internalID: 0
       firstFrame: 870
       lastFrame: 945
       wrapMode: 0
@@ -4872,31 +6114,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -5509,6 +6753,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CombatIdle
       takeName: Take 001
+      internalID: 0
       firstFrame: 945
       lastFrame: 1005
       wrapMode: 0
@@ -5545,31 +6790,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -6182,6 +7429,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CombatIdleBreak
       takeName: Take 001
+      internalID: 0
       firstFrame: 1005
       lastFrame: 1105
       wrapMode: 0
@@ -6218,31 +7466,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -6855,6 +8105,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CombatIdleToIdle
       takeName: Take 001
+      internalID: 0
       firstFrame: 1110
       lastFrame: 1180
       wrapMode: 0
@@ -6891,31 +8142,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -7528,6 +8781,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Taunt
       takeName: Take 001
+      internalID: 0
       firstFrame: 1205
       lastFrame: 1360
       wrapMode: 0
@@ -7564,31 +8818,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -8201,6 +9457,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Dodge
       takeName: Take 001
+      internalID: 0
       firstFrame: 1390
       lastFrame: 1460
       wrapMode: 0
@@ -8237,31 +9494,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -8874,6 +10133,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack1
       takeName: Take 001
+      internalID: 0
       firstFrame: 1510
       lastFrame: 1585
       wrapMode: 0
@@ -8910,31 +10170,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -9547,6 +10809,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack2
       takeName: Take 001
+      internalID: 0
       firstFrame: 1608
       lastFrame: 1670
       wrapMode: 0
@@ -9583,31 +10846,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -10220,6 +11485,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack3
       takeName: Take 001
+      internalID: 0
       firstFrame: 1706
       lastFrame: 1775
       wrapMode: 0
@@ -10256,31 +11522,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -10893,6 +12161,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Attack4
       takeName: Take 001
+      internalID: 0
       firstFrame: 1800
       lastFrame: 1915
       wrapMode: 0
@@ -10929,31 +12198,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -11566,6 +12837,7 @@ ModelImporter:
     - serializedVersion: 16
       name: BlockStart
       takeName: Take 001
+      internalID: 0
       firstFrame: 1950
       lastFrame: 1980
       wrapMode: 0
@@ -11602,31 +12874,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -12239,6 +13513,7 @@ ModelImporter:
     - serializedVersion: 16
       name: BlockLoop
       takeName: Take 001
+      internalID: 0
       firstFrame: 1980
       lastFrame: 2025
       wrapMode: 0
@@ -12275,31 +13550,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -12912,6 +14189,7 @@ ModelImporter:
     - serializedVersion: 16
       name: BlockHit
       takeName: Take 001
+      internalID: 0
       firstFrame: 2029.9999
       lastFrame: 2050
       wrapMode: 0
@@ -12948,31 +14226,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -13585,6 +14865,7 @@ ModelImporter:
     - serializedVersion: 16
       name: BlockEnd
       takeName: Take 001
+      internalID: 0
       firstFrame: 2060
       lastFrame: 2090
       wrapMode: 0
@@ -13621,31 +14902,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -14258,6 +15541,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Death
       takeName: Take 001
+      internalID: 0
       firstFrame: 2120
       lastFrame: 2190
       wrapMode: 0
@@ -14294,31 +15578,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -14931,6 +16217,7 @@ ModelImporter:
     - serializedVersion: 16
       name: GotHit
       takeName: Take 001
+      internalID: 0
       firstFrame: 2210
       lastFrame: 2260
       wrapMode: 0
@@ -14967,31 +16254,33 @@ ModelImporter:
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base HumanLCalf/Base
-          HumanLFoot/Base HumanLToe11/Base HumanLToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanLThigh1/Base HumanLThigh2/Base
+          HumanLCalf/Base HumanLFoot/Base HumanLToe11/Base HumanLToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11
         weight: 1
-      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base HumanRCalf/Base
-          HumanRFoot/Base HumanRToe11/Base HumanRToe12
+      - path: BoneRoot/Base HumanPelvis/Base HumanRThigh1/Base HumanRThigh2/Base
+          HumanRCalf/Base HumanRFoot/Base HumanRToe11/Base HumanRToe12
         weight: 1
       - path: BoneRoot/Base HumanPelvis/Base HumanSheathRig
         weight: 1
@@ -15608,25 +16897,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -15635,10 +16931,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Base HumanPelvis
       humanName: Hips
@@ -16134,8 +17430,7 @@ ModelImporter:
     - name: Base HumanLToe12
       parentName: Base HumanLToe11
       position: {x: -0.000000019073486, y: 0, z: 0.048100337}
-      rotation: {x: -0.00000020489095, y: -0.00000002403977, z: 0.0000000097788835,
-        w: 1}
+      rotation: {x: -0.00000020489095, y: -0.00000002403977, z: 0.0000000097788835, w: 1}
       scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
     - name: Base HumanRThigh1
       parentName: Base HumanPelvis
@@ -16620,8 +17915,7 @@ ModelImporter:
     - name: EyeL
       parentName: EyePointL
       position: {x: -0.000000014305114, y: 0.0000000023841857, z: 0.00000015258789}
-      rotation: {x: -0.0000006183811, y: 0.000000025145852, z: -0.00000028364806,
-        w: 1}
+      rotation: {x: -0.0000006183811, y: 0.000000025145852, z: -0.00000028364806, w: 1}
       scale: {x: 1.0000013, y: 0.99999976, z: 1}
     - name: L_eyelid_lower
       parentName: EyePointL
@@ -17140,13 +18434,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
