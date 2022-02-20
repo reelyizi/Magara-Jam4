@@ -20,10 +20,10 @@ public class DamageIndicator : MonoBehaviour
         transform.LookAt(2*transform.position-Camera.main.transform.position);
 
         float direction=Random.rotation.eulerAngles.z;
-        iniPos=transform.position+new Vector3(0,2,0);
+        iniPos=transform.position+new Vector3(0,4,0);
         float dist = Random.Range(minDist,maxDist);
         targetPos=iniPos+Quaternion.Euler(0,0,direction)* new Vector3(dist,dist,0);
-        transform.localScale=new Vector3(0,5,0);
+        transform.localScale=new Vector3(0,2,0);
     }
 
     // Update is called once per frame

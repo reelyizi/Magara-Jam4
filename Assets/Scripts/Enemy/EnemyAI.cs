@@ -16,10 +16,11 @@ public class EnemyAI : MonoBehaviour
     public GameObject projectile;
     private GameObject[] otherEnemys;
     public GameObject damageText;
+    public LayerMask whatIsPlayer;
 
     //States
     public float sightRange, attackRange, supportRange;
-    public bool playerInSightRange, playerInAttackRange, playerDetect;
+    public bool playerInSightRange, playerInAttackRange;
     private Animator animator;
     public enum LifeState { lives, death };
     public LifeState lifeState;
@@ -38,7 +39,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (lifeState == LifeState.lives)
         {
-            if (Mathf.Abs(transform.position.z - player.transform.position.z) <= sightRange)
+            /*if (Mathf.Abs(transform.position.z - player.transform.position.z) <= sightRange)
                 playerInSightRange = true;
             else
                 playerInSightRange = false;
@@ -46,7 +47,12 @@ public class EnemyAI : MonoBehaviour
             if (Mathf.Abs(transform.position.z - player.transform.position.z) <= attackRange)
                 playerInAttackRange = true;
             else
-                playerInAttackRange = false;
+                playerInAttackRange = false;*/
+
+            //Check for sight and attack range
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
 
 
             if (playerInSightRange && !playerInAttackRange)
@@ -65,25 +71,22 @@ public class EnemyAI : MonoBehaviour
             {
                 DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                 indicator.SetDamageText(Random.Range(10, 30));
-                TakeDamage(120);
+                TakeDamage(40);
             }
         }
         if (lifeState == LifeState.death)
         {
-            agent.SetDestination(transform.position);
+            agent.enabled = false;
         }
     }
     public void ChasePlayer()
     {
         agent.SetDestination(player.position);
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && !playerInAttackRange)
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("GotHit") && !playerInAttackRange)
         {
             animator.SetTrigger("Walk");
         }
-    }
-    void ReadyToWalk()
-    {
-        playerDetect = true;
+
     }
     void CheckOtherEnemy()
     {
@@ -126,7 +129,20 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
 
+
         if (health <= 0) DestroyEnemy();
+        else TakeDamageEffect();
+    }
+    private void TakeDamageEffect()
+    {
+        lifeState = LifeState.death;
+        animator.SetTrigger("GotHit");
+        Invoke("ReWalk", 1.2f);
+    }
+    void ReWalk()
+    {
+        lifeState = LifeState.lives;
+        agent.enabled = true;
     }
     private void DestroyEnemy()
     {

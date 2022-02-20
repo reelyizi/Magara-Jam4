@@ -4514,7 +4514,7 @@ GameObject:
   - component: {fileID: 7741485943592405642}
   m_Layer: 9
   m_Name: Half Orc Male DEMO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4614,11 +4614,15 @@ MonoBehaviour:
   timeBetweenAttacks: 2
   projectile: {fileID: 0}
   damageText: {fileID: 4117162466495136881, guid: ca40e68eb584c9e428cef08075f47707, type: 3}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
   sightRange: 30
   attackRange: 3.5
   supportRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+  lifeState: 0
 --- !u!1 &1224621553757328
 GameObject:
   m_ObjectHideFlags: 0
