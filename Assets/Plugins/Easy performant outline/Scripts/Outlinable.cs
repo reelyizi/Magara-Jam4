@@ -51,7 +51,7 @@ namespace EPOOutline
         MaskingMode
     }
 
-    [ExecuteAlways]
+    //[ExecuteAlways]
     public class Outlinable : MonoBehaviour
     {
         private static List<TargetStateListener> tempListeners = new List<TargetStateListener>();

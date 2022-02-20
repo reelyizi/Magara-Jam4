@@ -1,22 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float health;
+    public float health,maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    public GameObject projectile;
+    public GameObject healthUI;
     private GameObject[] otherEnemys;
     public GameObject damageText;
     public LayerMask whatIsPlayer;
+    [SerializeField] private Image healthImage;
 
     //States
     public float sightRange, attackRange, supportRange;
@@ -28,6 +30,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
+        maxHealth=health;
         lifeState = LifeState.lives;
         otherEnemys = GameObject.FindGameObjectsWithTag("Enemy");
         animator = GetComponent<Animator>();
@@ -71,7 +74,7 @@ public class EnemyAI : MonoBehaviour
             {
                 DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                 indicator.SetDamageText(Random.Range(10, 30));
-                TakeDamage(40);
+                TakeDamage(10);
             }
         }
         if (lifeState == LifeState.death)
@@ -128,10 +131,22 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
-
-        if (health <= 0) DestroyEnemy();
-        else TakeDamageEffect();
+        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
+        Invoke("DeActiveOutlineable",0.2f);
+        if (health <= 0)
+        {
+            DestroyEnemy();
+            Destroy(healthUI);
+        } 
+        else 
+        {
+            healthImage.fillAmount=health/maxHealth;
+            TakeDamageEffect();
+        }
+    }
+    private void DeActiveOutlineable()
+    {
+        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=false;
     }
     private void TakeDamageEffect()
     {
