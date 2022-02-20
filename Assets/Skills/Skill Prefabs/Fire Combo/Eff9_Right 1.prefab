@@ -19697,6 +19697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210782500164954}
   - component: {fileID: 539613366381925823}
+  - component: {fileID: 8390246868049092005}
   m_Layer: 0
   m_Name: Eff9_Right 1
   m_TagString: Untagged
@@ -19735,3 +19736,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7, y: 1, z: 6}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8390246868049092005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935082409722074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 3

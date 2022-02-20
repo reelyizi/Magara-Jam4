@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PointerOverUI : MonoBehaviour
 {
+    private GameObject clickButton;
     void Update()
     {
         Debug.Log(IsMouseOverUIWithIgnore());
@@ -27,8 +28,15 @@ public class PointerOverUI : MonoBehaviour
         {
             if(raycastResults[i].gameObject.GetComponent<ButtonClick>() != null)
             {
-                Debug.Log("Test");
+
+                clickButton = raycastResults[i].gameObject.transform.GetChild(0).gameObject;
+                clickButton.SetActive(true);
                 return true;
+                
+            }
+            else
+            {
+                clickButton.SetActive(false);
             }
         }
         return false;
