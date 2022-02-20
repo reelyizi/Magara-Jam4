@@ -4611,12 +4611,12 @@ MonoBehaviour:
   player: {fileID: 0}
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 2
   projectile: {fileID: 0}
   damageText: {fileID: 4117162466495136881, guid: ca40e68eb584c9e428cef08075f47707, type: 3}
-  sightRange: 20
-  attackRange: 2
-  supportRange: 20
+  sightRange: 30
+  attackRange: 3.5
+  supportRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!1 &1224621553757328

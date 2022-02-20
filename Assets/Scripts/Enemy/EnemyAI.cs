@@ -19,51 +19,71 @@ public class EnemyAI : MonoBehaviour
 
     //States
     public float sightRange, attackRange, supportRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange, playerDetect;
     private Animator animator;
+    public enum LifeState { lives, death };
+    public LifeState lifeState;
+
 
     private void Awake()
     {
+        lifeState = LifeState.lives;
         otherEnemys = GameObject.FindGameObjectsWithTag("Enemy");
-        animator=GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator.SetTrigger("IdleBreak2");
     }
 
     private void Update()
     {
-        if (Mathf.Abs(transform.position.z - player.transform.position.z) <= sightRange)
-            playerInSightRange = true;
-        else
-            playerInSightRange = false;
-
-        if (Mathf.Abs(transform.position.z - player.transform.position.z) <= attackRange)
-            playerInAttackRange = true;
-        else
-            playerInAttackRange = false;
-
-
-        if (playerInSightRange && !playerInAttackRange)
+        if (lifeState == LifeState.lives)
         {
-            ChasePlayer();
-            CheckOtherEnemy();
+            if (Mathf.Abs(transform.position.z - player.transform.position.z) <= sightRange)
+                playerInSightRange = true;
+            else
+                playerInSightRange = false;
+
+            if (Mathf.Abs(transform.position.z - player.transform.position.z) <= attackRange)
+                playerInAttackRange = true;
+            else
+                playerInAttackRange = false;
+
+
+            if (playerInSightRange && !playerInAttackRange)
+            {
+                //Move
+                ChasePlayer();
+                CheckOtherEnemy();
+            }
+            if (playerInAttackRange && playerInSightRange)
+            {
+                //Attack
+                AttackPlayer();
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                indicator.SetDamageText(Random.Range(10, 30));
+                TakeDamage(120);
+            }
         }
-
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
-
-        if(Input.GetMouseButtonDown(1))
+        if (lifeState == LifeState.death)
         {
-            DamageIndicator indicator=Instantiate(damageText,transform.position,Quaternion.identity).GetComponent<DamageIndicator>();
-            indicator.SetDamageText(Random.Range(10,30));
+            agent.SetDestination(transform.position);
         }
     }
     public void ChasePlayer()
     {
         agent.SetDestination(player.position);
-        if(!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && !playerInAttackRange)
         {
             animator.SetTrigger("Walk");
         }
+    }
+    void ReadyToWalk()
+    {
+        playerDetect = true;
     }
     void CheckOtherEnemy()
     {
@@ -85,12 +105,12 @@ public class EnemyAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            if(!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack3") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack4"))
+            if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
             {
-                int randomAttack=Random.Range(1,4);
-                animator.SetTrigger("Attack"+randomAttack);
+                int randomAttack = Random.Range(1, 3);
+                animator.SetTrigger("Attack" + randomAttack);
             }
-            
+
             ///End of attack code
 
             alreadyAttacked = true;
@@ -106,11 +126,13 @@ public class EnemyAI : MonoBehaviour
     {
         health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (health <= 0) DestroyEnemy();
     }
     private void DestroyEnemy()
     {
-        Destroy(gameObject);
+        lifeState = LifeState.death;
+        animator.SetTrigger("Death");
+        Destroy(gameObject, 3);
     }
 
     private void OnDrawGizmosSelected()
