@@ -30,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
+        if (GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
+            Move();
     }
 
     private void OnDisable()
