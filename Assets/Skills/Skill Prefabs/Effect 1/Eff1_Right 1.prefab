@@ -4829,7 +4829,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e501f27c5cf7c9a459f73b1f136ea788, type: 2}
-  - {fileID: 2100000, guid: e501f27c5cf7c9a459f73b1f136ea788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4884,7 +4883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4673061110187000}
-  - component: {fileID: 8817843418849095573}
+  - component: {fileID: 9164723723058411148}
   m_Layer: 0
   m_Name: Eff1_Right 1
   m_TagString: Untagged
@@ -4912,7 +4911,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!65 &8817843418849095573
+--- !u!65 &9164723723058411148
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4920,10 +4919,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107296871017770}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.5, y: 1, z: 6.5}
+  m_Size: {x: 7, y: 1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1471532546853156
 GameObject:
@@ -9753,7 +9752,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4925b5d5793812b4ba5dfb11823f9fa8, type: 2}
   - {fileID: 2100000, guid: 4925b5d5793812b4ba5dfb11823f9fa8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14629,7 +14627,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 33c94031a921bd44496f381392371cea, type: 2}
-  - {fileID: 2100000, guid: 33c94031a921bd44496f381392371cea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19504,7 +19501,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c5cc2d994cc69434782748a00d716a81, type: 2}
-  - {fileID: 2100000, guid: c5cc2d994cc69434782748a00d716a81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24378,7 +24374,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4a63dbf8c16ac94d881d7ce150cf21e, type: 2}
   - {fileID: 2100000, guid: d4a63dbf8c16ac94d881d7ce150cf21e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
