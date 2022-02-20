@@ -20,11 +20,14 @@ public class EnemyAI : MonoBehaviour
     //States
     public float sightRange, attackRange, supportRange;
     public bool playerInSightRange, playerInAttackRange;
+    private Animator animator;
 
     private void Awake()
     {
         otherEnemys = GameObject.FindGameObjectsWithTag("Enemy");
+        animator=GetComponent<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        animator.SetTrigger("IdleBreak2");
     }
 
     private void Update()
@@ -57,7 +60,10 @@ public class EnemyAI : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.position);
-
+        if(!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+        {
+            animator.SetTrigger("Walk");
+        }
     }
     void CheckOtherEnemy()
     {
@@ -79,7 +85,12 @@ public class EnemyAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-
+            if(!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack3") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack4"))
+            {
+                int randomAttack=Random.Range(1,4);
+                animator.SetTrigger("Attack"+randomAttack);
+            }
+            
             ///End of attack code
 
             alreadyAttacked = true;
