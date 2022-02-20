@@ -981,18 +981,18 @@ AnimatorStateMachine:
   - {fileID: -6176175561052384581}
   - {fileID: -8641411922322414473}
   m_StateMachineTransitions:
-  - first: {fileID: 8157451305670745712}
-    second:
-    - {fileID: -6169816572612423109}
-  - first: {fileID: 3821664691968698719}
-    second:
-    - {fileID: -5301152808109197460}
-  - first: {fileID: -1560007527473552549}
-    second:
-    - {fileID: -3121444754713212014}
   - first: {fileID: -7399163105514794131}
     second:
     - {fileID: -812543611673442996}
+  - first: {fileID: -1560007527473552549}
+    second:
+    - {fileID: -3121444754713212014}
+  - first: {fileID: 3821664691968698719}
+    second:
+    - {fileID: -5301152808109197460}
+  - first: {fileID: 8157451305670745712}
+    second:
+    - {fileID: -6169816572612423109}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -640, y: -30, z: 0}
   m_EntryPosition: {x: -560, y: 10, z: 0}
