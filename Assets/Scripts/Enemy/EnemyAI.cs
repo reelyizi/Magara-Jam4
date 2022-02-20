@@ -57,7 +57,7 @@ public class EnemyAI : MonoBehaviour
             playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
 
-
+            CheckVisible();
             if (playerInSightRange && !playerInAttackRange)
             {
                 //Move
@@ -74,12 +74,31 @@ public class EnemyAI : MonoBehaviour
             {
                 DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                 indicator.SetDamageText(Random.Range(10, 30));
-                TakeDamage(10);
+                TakeDamage(100);
             }
         }
         if (lifeState == LifeState.death)
         {
             agent.enabled = false;
+        }
+    }
+    private void CheckVisible()
+    {
+        Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position-transform.position);
+        var dir = gameObject.transform.position - Camera.main.transform.position;
+        RaycastHit hit;
+        if(Physics.Raycast(Camera.main.transform.position,dir,out hit))
+        {
+            Debug.DrawLine(Camera.main.gameObject.transform.position,hit.point,Color.red);
+            Debug.Log(hit.collider.name+", "+hit.collider.tag);
+            if(hit.collider.tag!="Enemy")
+            {
+                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
+            }
+            else
+            {
+                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=false;
+            }
         }
     }
     public void ChasePlayer()
