@@ -148,23 +148,41 @@ public class SkillManager : MonoBehaviour
     {
         GameObject effect = null;
         if (skillPositionTypes[index] == SkillPositionType.character)
+        {
             effect = Instantiate(skillParticle[index], transform.position, transform.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.frontCharacter)
+        {
             effect = Instantiate(skillParticle[index], effectPosition.position, effectPosition.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.groundObject)
+        {
             effect = Instantiate(skillParticle[index], groundEffectPosition.position, groundEffectPosition.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.leftHand)
+        {
             effect = Instantiate(skillParticle[index], leftHandEffectPosition.position, leftHandEffectPosition.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.rightHand)
+        {
             effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.head)
+        {
             effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.middleFrontCharacter)
+        {
             effect = Instantiate(skillParticle[index], middleFrontCharacter.position, middleFrontCharacter.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.rotationalRightMiddleFrontCharacter)
+        {
             effect = Instantiate(skillParticle[index], rotationalRightMiddleFrontCharacter.position, rotationalRightMiddleFrontCharacter.rotation);
+        }
         else if (skillPositionTypes[index] == SkillPositionType.rotationalLeftMiddleFrontCharacter)
+        {
             effect = Instantiate(skillParticle[index], rotationalLeftMiddleFrontCharacter.position, rotationalLeftMiddleFrontCharacter.rotation);
+        }
 
         Destroy(effect, 5f);
     }
