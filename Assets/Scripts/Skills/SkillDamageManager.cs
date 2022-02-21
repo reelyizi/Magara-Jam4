@@ -47,4 +47,6 @@ public class SkillDamageManager : MonoBehaviour
 
     public int phoenixDamage = 150;
     public int phoenixCriticalChance = 10;
+
+    public int groundSlash = 120;
 }

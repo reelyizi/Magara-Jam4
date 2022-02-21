@@ -28,6 +28,7 @@ public class SkillManager : MonoBehaviour
 
     [SerializeField] private Transform effectPosition;
     [SerializeField] private Transform groundEffectPosition;
+    [SerializeField] private Transform nearGroundEffectPosition;
     [SerializeField] private Transform rightHandEffectPosition;
     [SerializeField] private Transform leftHandEffectPosition;
     [SerializeField] private Transform head;
@@ -76,9 +77,11 @@ public class SkillManager : MonoBehaviour
                 StartAnimations();
                 GenerateSkill(4);
             }
-            else if (Input.GetKeyDown(KeyCode.D) && !skillFlag)
+            else if (Input.GetKeyDown(KeyCode.D) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[5]))
             {
-                Debug.Log("F");
+                cloneSkill = skillSlots[5].GetComponent<SkillSlot>().skillObject;
+                StartAnimations();
+                GenerateSkill(5);
             }
 
             if (skillFlag)
@@ -170,6 +173,8 @@ public class SkillManager : MonoBehaviour
             effect = Instantiate(skillParticle[index], rotationalRightMiddleFrontCharacter.position, rotationalRightMiddleFrontCharacter.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.rotationalLeftMiddleFrontCharacter)
             effect = Instantiate(skillParticle[index], rotationalLeftMiddleFrontCharacter.position, rotationalLeftMiddleFrontCharacter.rotation);
+        else if (skillPositionTypes[index] == SkillPositionType.nearGroundObject)
+            effect = Instantiate(skillParticle[index], nearGroundEffectPosition.position, nearGroundEffectPosition.rotation);
 
         //Destroy(effect, 5f);
     }

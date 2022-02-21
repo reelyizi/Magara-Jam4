@@ -6,7 +6,6 @@ using TMPro;
 
 public class PointerOverUI : MonoBehaviour
 {
-    private GameObject clickButton;
     [SerializeField] private GameObject moveableHint;
     void Update()
     {
@@ -39,8 +38,8 @@ public class PointerOverUI : MonoBehaviour
                     (buttonClick.enchanceType == EnchanceType.CriticalChance) ? "Increases the critical change of the skill by " + buttonClick.criticalChance.ToString() :
                     (buttonClick.enchanceType == EnchanceType.LevelUp) ? "Add new combo to skill" : "Something went wrong!";
 
-                Debug.Log(clickButton.GetComponent<RectTransform>().anchoredPosition);
-                //clickButton.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                //Debug.Log(clickButton.GetComponent<RectTransform>().anchoredPosition);
+                moveableHint.transform.position = raycastResults[i].gameObject.transform.position + Vector3.up * 130;
                 //clickButton = raycastResults[i].gameObject.transform.GetChild(0).gameObject;
                 //clickButton.SetActive(true);
                 

@@ -21,6 +21,7 @@ public enum SkillPositionType
     character,
     frontCharacter,
     groundObject,
+    nearGroundObject,
     leftHand,
     rightHand,
     head,

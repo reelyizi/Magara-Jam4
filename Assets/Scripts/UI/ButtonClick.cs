@@ -44,6 +44,9 @@ public class ButtonClick : MonoBehaviour
                         case SkillType.Phoenix:
                             SkillDamageManager._instance.phoenixDamage += damage;
                             break;
+                        case SkillType.GroundSlash:
+                            SkillDamageManager._instance.groundSlash += damage;
+                            break;
                         default:
                             Debug.LogError("Something went wrong!");
                             break;
@@ -100,5 +103,6 @@ public enum SkillType
     GreenSlash,
     FireSlash,
     Ulti,
-    Phoenix
+    Phoenix,
+    GroundSlash
 }
