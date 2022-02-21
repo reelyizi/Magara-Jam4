@@ -36,4 +36,7 @@ public class SkillDamageManager : MonoBehaviour
     public int fireCriticalChance = 5;
     public int fireCrackDamage = 85;
     public int ultiDamage = 200;
+
+    public int phoenixDamage = 150;
+    public int phoenixCriticalChance = 10;
 }
