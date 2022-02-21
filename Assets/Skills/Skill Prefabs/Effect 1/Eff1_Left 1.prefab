@@ -192,6 +192,8 @@ GameObject:
   - component: {fileID: 4417147795836934}
   - component: {fileID: 198347220953093608}
   - component: {fileID: 199716644122620728}
+  - component: {fileID: 2454277714500179219}
+  - component: {fileID: 7871984956320751948}
   m_Layer: 0
   m_Name: ColorRing
   m_TagString: Untagged
@@ -223,7 +225,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -5055,6 +5057,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &2454277714500179219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539171841398052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.035798, y: 5.775209, z: 0.5212787}
+  m_Center: {x: 0.094388485, y: 0.10277731, z: 0.09304641}
+--- !u!114 &7871984956320751948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539171841398052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 1
 --- !u!1 &1718155096770322
 GameObject:
   m_ObjectHideFlags: 0
@@ -19686,8 +19714,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4083041229271872}
-  - component: {fileID: 3928259849529320443}
-  - component: {fileID: -8580146267945737885}
   m_Layer: 0
   m_Name: Eff1_Left 1
   m_TagString: Untagged
@@ -19715,32 +19741,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3928259849529320443
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819066416490906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7, y: 1, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8580146267945737885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1819066416490906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillType: 1
 --- !u!1 &1995060427059300
 GameObject:
   m_ObjectHideFlags: 0

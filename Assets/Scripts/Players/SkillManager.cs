@@ -24,6 +24,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private List<GameObject> skillParticle = new List<GameObject>();
     [SerializeField] private List<float> skillDelay = new List<float>();
     [SerializeField] private List<SkillPositionType> skillPositionTypes = new List<SkillPositionType>();
+    [SerializeField] private List<SkillEffectType> skillEffectTypes = new List<SkillEffectType>();
 
     [SerializeField] private Transform effectPosition;
     [SerializeField] private Transform groundEffectPosition;
@@ -43,7 +44,7 @@ public class SkillManager : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
+        if (GameManager.instance.playStatus == GameManager.PlayStatus.ingame)
         {
             if (Input.GetKeyDown(KeyCode.Q) && !skillFlag && !SkillCooldownManagar._instance.bound.Contains(skillSlots[0]))
             {
@@ -111,10 +112,13 @@ public class SkillManager : MonoBehaviour
                         if (skillDelay[i] <= 0)
                         {
                             GenerateEffect(index);
+                            GenerateSound(index);
 
                             skillDelay.RemoveAt(i);
                             skillParticle.RemoveAt(i);
                             skillPositionTypes.RemoveAt(i);
+                            if (skillEffectTypes.Any())
+                                skillEffectTypes.RemoveAt(i);
                         }
                     }
                 }
@@ -126,7 +130,7 @@ public class SkillManager : MonoBehaviour
 
                 //elapsedTime -= Time.deltaTime;
             }
-        }        
+        }
     }
 
     private void GenerateSkill(int number)
@@ -137,54 +141,65 @@ public class SkillManager : MonoBehaviour
         SkillCooldownManagar._instance.AddCooldown(skillSlots[number], skillSlots[number].GetComponent<SkillSlot>().skillObject.skillCooldown);
     }
 
-    public void AddEffectList(List<float> delay, List<GameObject> particle, List<SkillPositionType> spt)
+    public void AddEffectList(List<float> delay, List<GameObject> particle, List<SkillPositionType> spt, List<SkillEffectType> set)
     {
         delay.ForEach(delegate (float delayTime) { skillDelay.Add(delayTime * 3); });
         particle.ForEach(delegate (GameObject particleObject) { skillParticle.Add(particleObject); });
         spt.ForEach(delegate (SkillPositionType spType) { skillPositionTypes.Add(spType); });
+        set.ForEach(delegate (SkillEffectType skillET) { skillEffectTypes.Add(skillET); });
     }
 
     private void GenerateEffect(int index)
     {
         GameObject effect = null;
         if (skillPositionTypes[index] == SkillPositionType.character)
-        {
             effect = Instantiate(skillParticle[index], transform.position, transform.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.frontCharacter)
-        {
             effect = Instantiate(skillParticle[index], effectPosition.position, effectPosition.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.groundObject)
-        {
             effect = Instantiate(skillParticle[index], groundEffectPosition.position, groundEffectPosition.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.leftHand)
-        {
             effect = Instantiate(skillParticle[index], leftHandEffectPosition.position, leftHandEffectPosition.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.rightHand)
-        {
             effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.head)
-        {
             effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.middleFrontCharacter)
-        {
             effect = Instantiate(skillParticle[index], middleFrontCharacter.position, middleFrontCharacter.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.rotationalRightMiddleFrontCharacter)
-        {
             effect = Instantiate(skillParticle[index], rotationalRightMiddleFrontCharacter.position, rotationalRightMiddleFrontCharacter.rotation);
-        }
         else if (skillPositionTypes[index] == SkillPositionType.rotationalLeftMiddleFrontCharacter)
-        {
             effect = Instantiate(skillParticle[index], rotationalLeftMiddleFrontCharacter.position, rotationalLeftMiddleFrontCharacter.rotation);
-        }
 
-        Destroy(effect, 5f);
+        //Destroy(effect, 5f);
+    }
+
+    private void GenerateSound(int index)
+    {
+        //if (skillEffectTypes[index] == SkillEffectType.slashSound)
+        //    AudioManager.instance.AudioPlay("Slash");
+        //else if (skillEffectTypes[index] == SkillEffectType.crackSound)
+        //    AudioManager.instance.AudioPlay("Crack");
+
+        if (skillEffectTypes.Any())
+        {
+            switch (skillEffectTypes[index])
+            {
+                case SkillEffectType.slashSound:
+                    AudioManager.instance.AudioPlay("Slash");
+                    break;
+                case SkillEffectType.crackSound:
+                    AudioManager.instance.AudioPlay("Crack");
+                    break;
+                default:
+                    Debug.LogError("Something went wrong!");
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogError("Missing Sound");
+        }
     }
 
     private void StartAnimations()

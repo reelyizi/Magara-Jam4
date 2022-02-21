@@ -4893,8 +4893,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4255178557649312}
-  - component: {fileID: 8046246376717575016}
-  - component: {fileID: 6901598656484666777}
   m_Layer: 0
   m_Name: Level 1 Green Slash
   m_TagString: Untagged
@@ -4920,31 +4918,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8046246376717575016
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217668729914568}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.49, y: 1, z: 4.34}
-  m_Center: {x: 0, y: 0, z: 1.54}
---- !u!114 &6901598656484666777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217668729914568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1251437126634560
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,6 +4929,8 @@ GameObject:
   - component: {fileID: 4990787716181322}
   - component: {fileID: 198265092818789256}
   - component: {fileID: 199693713138718094}
+  - component: {fileID: 974042477564705815}
+  - component: {fileID: 3054805496408933043}
   m_Layer: 0
   m_Name: BlackRing
   m_TagString: Untagged
@@ -4988,7 +4963,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9829,6 +9804,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &974042477564705815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251437126634560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 7
+--- !u!65 &3054805496408933043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251437126634560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5524445, y: 5.236347, z: 0.59841293}
+  m_Center: {x: 0.27622268, y: 0.26247025, z: -0.11712241}
 --- !u!1 &1371804967846506
 GameObject:
   m_ObjectHideFlags: 0
@@ -9840,6 +9841,8 @@ GameObject:
   - component: {fileID: 4687803416935838}
   - component: {fileID: 198007078231781788}
   - component: {fileID: 199960432619562362}
+  - component: {fileID: 9186803703510553218}
+  - component: {fileID: 6984504873743024525}
   m_Layer: 0
   m_Name: BlackRing (1)
   m_TagString: Untagged
@@ -9872,7 +9875,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -14713,6 +14716,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &9186803703510553218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371804967846506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4.7114143, z: 3.5810163}
+  m_Center: {x: 0, y: 0.69931215, z: -0.20949192}
+--- !u!114 &6984504873743024525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371804967846506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 7
 --- !u!1 &1573736516188086
 GameObject:
   m_ObjectHideFlags: 0

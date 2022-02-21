@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 offset;
 
     private Vector3 moveDirection;
+    [SerializeField] private LayerMask layerMask;
 
     [SerializeField] private GameObject VFX;
     [SerializeField] private float rotationSpeed;
@@ -49,13 +50,22 @@ public class PlayerMovement : MonoBehaviour
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                if (hit.collider.gameObject.CompareTag("Walkable"))
+                if (!hit.collider.gameObject.CompareTag("Walkable"))
+                {
+                    target = Vector3.zero;
+                    offset = Vector3.zero;
+                    moveDirection = Vector3.zero;
+                }
+                else
+                {
+                    
                     target = hit.point;
 
-                offset = target - transform.position;
-                moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
+                    offset = target - transform.position;
+                    moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
+                }
             }
         }
         //Debug.DrawRay(transform.position, transform.position + test - (Vector3.up), Color.yellow);

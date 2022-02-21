@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4921185245808850}
   - component: {fileID: 198270101122898300}
   - component: {fileID: 199916427645520612}
+  - component: {fileID: 2608784008686611888}
+  - component: {fileID: 6548424394839130257}
   m_Layer: 0
   m_Name: ColorRing
   m_TagString: Untagged
@@ -43,7 +45,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4893,6 +4895,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2608784008686611888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222627033453290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 6
+--- !u!65 &6548424394839130257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222627033453290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.845625, y: 18.201488, z: 4.9999995}
+  m_Center: {x: 1.011834, y: 0.7776146, z: -3.181134e-16}
 --- !u!1 &1648509489993130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,8 +4930,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4466123749543506}
-  - component: {fileID: 2269676102448854318}
-  - component: {fileID: 7700693471703507574}
   m_Layer: 0
   m_Name: Eff7_Slash 1
   m_TagString: Untagged
@@ -4927,32 +4953,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2269676102448854318
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648509489993130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15, y: 2, z: 13}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7700693471703507574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648509489993130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillType: 6
 --- !u!1 &1733113292564072
 GameObject:
   m_ObjectHideFlags: 0

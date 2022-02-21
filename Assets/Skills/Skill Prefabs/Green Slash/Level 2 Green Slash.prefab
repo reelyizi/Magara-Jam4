@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4962770713573204}
   - component: {fileID: 198567003494177912}
   - component: {fileID: 199578076193363088}
+  - component: {fileID: 1976357448876267708}
+  - component: {fileID: 1706639601869885899}
   m_Layer: 0
   m_Name: Wave2
   m_TagString: Untagged
@@ -43,7 +45,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4875,6 +4877,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!65 &1976357448876267708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114816201426842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.9559727, y: 5.076137, z: 12.898498}
+  m_Center: {x: -0.22236155, y: 0.15595739, z: 6.6505375}
+--- !u!114 &1706639601869885899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114816201426842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 7
 --- !u!1 &1150801671553850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,6 +4914,8 @@ GameObject:
   - component: {fileID: 4122120916692242}
   - component: {fileID: 198115325556199810}
   - component: {fileID: 199022610532392248}
+  - component: {fileID: 662857858688842508}
+  - component: {fileID: 3440703480769159391}
   m_Layer: 0
   m_Name: BlackRing (2)
   m_TagString: Untagged
@@ -4918,7 +4948,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 1
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9759,6 +9789,32 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &662857858688842508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150801671553850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillType: 7
+--- !u!65 &3440703480769159391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150801671553850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.320035, y: 4.283124, z: 3}
+  m_Center: {x: 0.07732737, y: 0.64156246, z: 2.0117253e-15}
 --- !u!1 &1217668729914568
 GameObject:
   m_ObjectHideFlags: 0
@@ -9768,8 +9824,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4255178557649312}
-  - component: {fileID: 32147333569557344}
-  - component: {fileID: 1870579718222454943}
   m_Layer: 0
   m_Name: Level 2 Green Slash
   m_TagString: Untagged
@@ -9797,32 +9851,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &32147333569557344
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217668729914568}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 1.59, z: 15}
-  m_Center: {x: 0, y: 0, z: 6.29}
---- !u!114 &1870579718222454943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217668729914568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd833990f4c4584eba4f9d6c630a6d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skillType: 7
 --- !u!1 &1251437126634560
 GameObject:
   m_ObjectHideFlags: 0
