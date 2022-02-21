@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float health,maxHealth;
+    public int health,maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
@@ -27,9 +27,12 @@ public class EnemyAI : MonoBehaviour
     public enum LifeState { lives, death };
     public LifeState lifeState;
 
-
+    //
+    private SkillDamageType skillDamageType;
+    private bool onceTime;
     private void Awake()
     {
+        onceTime = false;
         maxHealth=health;
         lifeState = LifeState.lives;
         otherEnemys = GameObject.FindGameObjectsWithTag("Enemy");
@@ -69,13 +72,6 @@ public class EnemyAI : MonoBehaviour
                 //Attack
                 AttackPlayer();
             }
-
-            if (Input.GetMouseButtonDown(1))
-            {
-                DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
-                indicator.SetDamageText(Random.Range(10, 30));
-                TakeDamage(100);
-            }
         }
         if (lifeState == LifeState.death)
         {
@@ -89,8 +85,6 @@ public class EnemyAI : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.transform.position,dir,out hit))
         {
-            Debug.DrawLine(Camera.main.gameObject.transform.position,hit.point,Color.red);
-            Debug.Log(hit.collider.name+", "+hit.collider.tag);
             if(hit.collider.tag!="Enemy")
             {
                 this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
@@ -183,6 +177,118 @@ public class EnemyAI : MonoBehaviour
         lifeState = LifeState.death;
         animator.SetTrigger("Death");
         Destroy(gameObject, 3);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
+        {
+            skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
+            int i = Random.Range(0, 100);
+            if (skillDamageType._skillType == SkillDamageType.SkillType.RedSkillRight || skillDamageType._skillType == SkillDamageType.SkillType.RedSkillLeft)
+            {
+                if (i > SkillDamageManager._instance.redSlashCriticalChance)
+                {
+                    TakeDamage(SkillDamageManager._instance.redSlashDamage * 2);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.redSlashDamage * 2);
+                }
+
+                else
+                {
+                    TakeDamage(SkillDamageManager._instance.redSlashDamage);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.redSlashDamage);
+                }
+
+            }
+            if (skillDamageType._skillType == SkillDamageType.SkillType.RedSkillCrack)
+            {
+                if (i > SkillDamageManager._instance.redSlashCriticalChance)
+                {
+                    TakeDamage(SkillDamageManager._instance.redCrackDamage * 2);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.redCrackDamage * 2);
+                }
+                else
+                {
+                    TakeDamage(SkillDamageManager._instance.redCrackDamage);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.redCrackDamage);
+                }
+            }
+            if (skillDamageType._skillType == SkillDamageType.SkillType.FireSkillLeft || skillDamageType._skillType == SkillDamageType.SkillType.FireSkillRight)
+            {
+                if (i > SkillDamageManager._instance.fireCriticalChance)
+                {
+                    TakeDamage(SkillDamageManager._instance.fireSlashDamage * 2);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.fireSlashDamage * 2);
+                }
+                else
+                {
+                    TakeDamage(SkillDamageManager._instance.fireSlashDamage);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.fireSlashDamage);
+                }
+
+                if (skillDamageType._skillType == SkillDamageType.SkillType.FireSkillCrack)
+                {
+                    if (i > SkillDamageManager._instance.fireCriticalChance)
+                    {
+                        TakeDamage(SkillDamageManager._instance.fireCrackDamage * 2);
+                        DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                        indicator.SetDamageText(SkillDamageManager._instance.fireCrackDamage * 2);
+                    }
+
+                    else
+                    {
+                        TakeDamage(SkillDamageManager._instance.fireCrackDamage);
+                        DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                        indicator.SetDamageText(SkillDamageManager._instance.fireCrackDamage);
+                    }
+
+                }
+                
+            }
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
+        {
+            if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
+            {
+                skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
+                int i = Random.Range(0, 100);
+                if (i > SkillDamageManager._instance.greenCriticalChance)
+                {
+                    TakeDamage(SkillDamageManager._instance.greenSlashDamage * 2);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.greenSlashDamage * 2);
+                }
+                else
+                {
+                    TakeDamage(SkillDamageManager._instance.greenSlashDamage);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.greenSlashDamage);
+                }
+                onceTime = true;
+            }
+            if (skillDamageType._skillType == SkillDamageType.SkillType.UltiSlash && !onceTime)
+            {
+                TakeDamage(SkillDamageManager._instance.ultiDamage);
+                DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                indicator.SetDamageText(SkillDamageManager._instance.ultiDamage);
+                onceTime = true;
+            }
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+      if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash || skillDamageType._skillType == SkillDamageType.SkillType.UltiSlash)
+          onceTime = false;
+        
     }
 
     private void OnDrawGizmosSelected()

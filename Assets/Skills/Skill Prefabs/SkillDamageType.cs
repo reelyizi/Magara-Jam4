@@ -15,5 +15,5 @@ public class SkillDamageType : MonoBehaviour
         UltiSlash,
         GreenSlash,
     }
-    [SerializeField] private SkillType _skillType;
+    [SerializeField] public SkillType _skillType;
 }

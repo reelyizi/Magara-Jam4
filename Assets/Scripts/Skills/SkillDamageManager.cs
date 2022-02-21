@@ -20,7 +20,9 @@ public class SkillDamageManager : MonoBehaviour
 
     public int redSlashDamage = 40;
     public int redSlashCriticalChance = 10;
-    public int redSlashLevel = 1;
+    public int redSlashLevel = 1; 
+    public int redCrackDamage = 70;
+    
     public int RedSlashLevel { 
         get { return redSlashLevel; } 
         set { 
@@ -32,5 +34,6 @@ public class SkillDamageManager : MonoBehaviour
     public int greenCriticalChance = 30;
     public int fireSlashDamage = 70;
     public int fireCriticalChance = 5;
+    public int fireCrackDamage = 85;
     public int ultiDamage = 200;
 }
