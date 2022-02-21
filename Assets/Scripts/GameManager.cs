@@ -85,20 +85,6 @@ public class GameManager : MonoBehaviour
             skillPanel.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !skillPanel.activeInHierarchy)
-        {
-            playStatus = PlayStatus.pause;
-            skillPanel.SetActive(false);
-            inGamePanel.SetActive(false);
-            pausePanel.SetActive(true);
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape) && skillPanel.activeInHierarchy)
-        {
-            playStatus = PlayStatus.ingame;
-            pausePanel.SetActive(false);
-            inGamePanel.SetActive(true);
-        }
-
         if (Input.GetKeyDown(KeyCode.H))
         {
             playerXP += 1000;
