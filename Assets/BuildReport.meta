@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/BuildReport.meta
 guid: 4833e18605f664a14bc7ca1f810d717e
+=======
+guid: 39515d06c7733b944860ce82a5f8d25e
+>>>>>>> Stashed changes:Assets/Animation/Buttons.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
