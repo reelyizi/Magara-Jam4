@@ -30,6 +30,7 @@ public class EnemyAI : MonoBehaviour
     //
     private SkillDamageType skillDamageType;
     private bool onceTime, isDead;
+    private Rigidbody rb;
     private void Awake()
     {
         onceTime = false;
@@ -98,7 +99,7 @@ public class EnemyAI : MonoBehaviour
     public void ChasePlayer()
     {
         agent.SetDestination(player.position);
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("GotHit") && !playerInAttackRange)
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && !this.animator.GetCurrentAnimatorStateInfo(0).IsName("GotHit") && !playerInAttackRange && health > 0)
         {
             animator.SetTrigger("Walk");
         }
@@ -121,7 +122,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(transform.position);
         Vector3 targetPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
         transform.LookAt(targetPos);
-        if (!alreadyAttacked)
+        if (!alreadyAttacked && health > 0)
         {
             ///Attack code here
             if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1") || !this.animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
@@ -151,9 +152,8 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
         Invoke("DeActiveOutlineable",0.2f);
-        if (health <= 0 && !isDead)
+        if (health <= 0)
         {
-            isDead = true;
             DestroyEnemy();
             Destroy(healthUI);
         } 
@@ -188,12 +188,14 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
+            rb = GetComponent<Rigidbody>();
             skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
             int i = Random.Range(0, 100);
             if (skillDamageType._skillType == SkillDamageType.SkillType.RedSkillRight || skillDamageType._skillType == SkillDamageType.SkillType.RedSkillLeft)
             {
                 if (i > SkillDamageManager._instance.redSlashCriticalChance)
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.redSlashDamage * 2);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.redSlashDamage * 2);
@@ -201,6 +203,7 @@ public class EnemyAI : MonoBehaviour
 
                 else
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.redSlashDamage);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.redSlashDamage);
@@ -211,12 +214,14 @@ public class EnemyAI : MonoBehaviour
             {
                 if (i > SkillDamageManager._instance.redSlashCriticalChance)
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.redCrackDamage * 2);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.redCrackDamage * 2);
                 }
                 else
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.redCrackDamage);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.redCrackDamage);
@@ -226,12 +231,14 @@ public class EnemyAI : MonoBehaviour
             {
                 if (i > SkillDamageManager._instance.fireCriticalChance)
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.fireSlashDamage * 2);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.fireSlashDamage * 2);
                 }
                 else
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.fireSlashDamage);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.fireSlashDamage);
@@ -241,6 +248,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     if (i > SkillDamageManager._instance.fireCriticalChance)
                     {
+                        rb.AddForce(-transform.forward * 300);
                         TakeDamage(SkillDamageManager._instance.fireCrackDamage * 2);
                         DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                         indicator.SetDamageText(SkillDamageManager._instance.fireCrackDamage * 2);
@@ -248,6 +256,7 @@ public class EnemyAI : MonoBehaviour
 
                     else
                     {
+                        rb.AddForce(-transform.forward * 300);
                         TakeDamage(SkillDamageManager._instance.fireCrackDamage);
                         DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                         indicator.SetDamageText(SkillDamageManager._instance.fireCrackDamage);
@@ -263,6 +272,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
+            rb = GetComponent<Rigidbody>();
             int i = Random.Range(0, 100);
             if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
             {
@@ -270,12 +280,14 @@ public class EnemyAI : MonoBehaviour
                 
                 if (i > SkillDamageManager._instance.greenCriticalChance)
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.greenSlashDamage * 2);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.greenSlashDamage * 2);
                 }
                 else
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.greenSlashDamage);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.greenSlashDamage);
@@ -284,6 +296,7 @@ public class EnemyAI : MonoBehaviour
             }
             if (skillDamageType._skillType == SkillDamageType.SkillType.UltiSlash && !onceTime)
             {
+                rb.AddForce(-transform.forward * 300);
                 TakeDamage(SkillDamageManager._instance.ultiDamage);
                 DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                 indicator.SetDamageText(SkillDamageManager._instance.ultiDamage);
@@ -293,12 +306,14 @@ public class EnemyAI : MonoBehaviour
             {
                 if (i > SkillDamageManager._instance.phoenixCriticalChance)
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.phoenixDamage * 2);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.phoenixDamage * 2);
                 }
                 else
                 {
+                    rb.AddForce(-transform.forward * 300);
                     TakeDamage(SkillDamageManager._instance.phoenixDamage);
                     DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                     indicator.SetDamageText(SkillDamageManager._instance.phoenixDamage);
