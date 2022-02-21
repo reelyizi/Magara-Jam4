@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float health,maxHealth;
+    public int health,maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
 
     //
     private SkillDamageType skillDamageType;
-    private bool onceTime, isDead;
+    private bool onceTime;
     private void Awake()
     {
         onceTime = false;
@@ -61,13 +61,13 @@ public class EnemyAI : MonoBehaviour
 
 
             CheckVisible();
-            if (playerInSightRange && !playerInAttackRange && health > 0)
+            if (playerInSightRange && !playerInAttackRange)
             {
                 //Move
                 ChasePlayer();
                 CheckOtherEnemy();
             }
-            if (playerInAttackRange && playerInSightRange && health > 0)
+            if (playerInAttackRange && playerInSightRange)
             {
                 //Attack
                 AttackPlayer();
@@ -146,9 +146,8 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
         Invoke("DeActiveOutlineable",0.2f);
-        if (health <= 0 && !isDead)
+        if (health <= 0)
         {
-            isDead = true;
             DestroyEnemy();
             Destroy(healthUI);
         } 
@@ -181,7 +180,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<SkillDamageType>() != null && health>0)
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
             skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
             int i = Random.Range(0, 100);
@@ -255,7 +254,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<SkillDamageType>() != null && health > 0)
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
             if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
             {
