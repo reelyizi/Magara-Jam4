@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
         { 
             playerHealth += value;
             healthBar.fillAmount = 1 - (((float)totalHealth - (float)playerHealth) / (float)totalHealth);
+            if (value < 0 && Random.value > 0.5f)
+                AudioManager.instance.AudioPlay("PlayerGetDamage");
         }
     }
 
@@ -72,6 +74,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && playStatus != PlayStatus.pause && !skillPanel.activeInHierarchy)
         {
             //playStatus = PlayStatus.skillTab;
+            Debug.Log("A");
             skillPanel.SetActive(true);
             //inGamePanel.SetActive(false);
         }

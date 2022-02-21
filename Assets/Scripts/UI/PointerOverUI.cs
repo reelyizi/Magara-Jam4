@@ -10,8 +10,8 @@ public class PointerOverUI : MonoBehaviour
     [SerializeField] private GameObject moveableHint;
     void Update()
     {
-        Debug.Log(IsMouseOverUIWithIgnore());
-
+        //Debug.Log(IsMouseOverUIWithIgnore());
+        IsMouseOverUIWithIgnore();
     }
 
     private bool IsMouseOverUI()
@@ -19,7 +19,7 @@ public class PointerOverUI : MonoBehaviour
         return EventSystem.current.IsPointerOverGameObject();
     }
 
-    private bool IsMouseOverUIWithIgnore()
+    private void IsMouseOverUIWithIgnore()  
     {
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
         pointerEventData.position = Input.mousePosition;
@@ -31,17 +31,20 @@ public class PointerOverUI : MonoBehaviour
             if(raycastResults[i].gameObject.GetComponent<ButtonClick>() != null)
             {
                 moveableHint.SetActive(true);
-                ButtonClick buttonClick = (ButtonClick)raycastResults[i].gameObject.GetComponent<ButtonClick>();
+                ButtonClick buttonClick = raycastResults[i].gameObject.GetComponent<ButtonClick>();
 
-                moveableHint.GetComponent<TextMeshProUGUI>().text = (buttonClick.enchanceType == EnchanceType.SkillDamage) ? "Increases the damage of the skill by " + buttonClick.damage :
-                    (buttonClick.enchanceType == EnchanceType.CriticalChance) ? "Increases the critical change of the skill by " + buttonClick.criticalChance :
-                    (buttonClick.enchanceType == EnchanceType.LevelUp) ? "Add new combo to skill " + buttonClick.criticalChance : "Something went wrong!";
 
-                clickButton.GetComponent<RectTransform>().position = raycastResults[i].gameObject.GetComponent<RectTransform>().position + Vector3.up * 120;
+                moveableHint.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = 
+                    (buttonClick.enchanceType == EnchanceType.SkillDamage) ? "Increases the damage of the skill by " + buttonClick.damage.ToString() :
+                    (buttonClick.enchanceType == EnchanceType.CriticalChance) ? "Increases the critical change of the skill by " + buttonClick.criticalChance.ToString() :
+                    (buttonClick.enchanceType == EnchanceType.LevelUp) ? "Add new combo to skill" : "Something went wrong!";
+
+                Debug.Log(clickButton.GetComponent<RectTransform>().anchoredPosition);
+                //clickButton.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 //clickButton = raycastResults[i].gameObject.transform.GetChild(0).gameObject;
                 //clickButton.SetActive(true);
-                return true;
                 
+                break;                
             }
             else
             {
@@ -49,6 +52,6 @@ public class PointerOverUI : MonoBehaviour
                 // clickButton.SetActive(false);
             }
         }
-        return false;
+        //return false;
     }
 }
