@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float health,maxHealth;
+    public float health, maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         onceTime = false;
-        maxHealth=health;
+        maxHealth = health;
         lifeState = LifeState.lives;
         otherEnemys = GameObject.FindGameObjectsWithTag("Enemy");
         animator = GetComponent<Animator>();
@@ -81,18 +81,18 @@ public class EnemyAI : MonoBehaviour
     }
     private void CheckVisible()
     {
-        Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position-transform.position);
+        Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position - transform.position);
         var dir = gameObject.transform.position - Camera.main.transform.position;
         RaycastHit hit;
-        if(Physics.Raycast(Camera.main.transform.position,dir,out hit))
+        if (Physics.Raycast(Camera.main.transform.position, dir, out hit))
         {
-            if(hit.collider.tag!="Enemy")
+            if (hit.collider.tag != "Enemy")
             {
-                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
+                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled = true;
             }
             else
             {
-                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=false;
+                this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled = false;
             }
         }
     }
@@ -140,7 +140,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void CurrentHealth()
     {
-        GameManager.instance.PlayerHealth = -15;
+        GameManager.instance.PlayerHealth = -10;
     }
     private void ResetAttack()
     {
@@ -150,22 +150,22 @@ public class EnemyAI : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
-        Invoke("DeActiveOutlineable",0.2f);
+        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled = true;
+        Invoke("DeActiveOutlineable", 0.2f);
         if (health <= 0)
         {
             DestroyEnemy();
             Destroy(healthUI);
-        } 
-        else 
+        }
+        else
         {
-            healthImage.fillAmount=health/maxHealth;
+            healthImage.fillAmount = health / maxHealth;
             TakeDamageEffect();
         }
     }
     private void DeActiveOutlineable()
     {
-        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=false;
+        this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled = false;
     }
     private void TakeDamageEffect()
     {
@@ -263,8 +263,8 @@ public class EnemyAI : MonoBehaviour
                     }
 
                 }
-                
-                
+
+
             }
         }
     }
@@ -277,7 +277,7 @@ public class EnemyAI : MonoBehaviour
             if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
             {
                 skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
-                
+
                 if (i > SkillDamageManager._instance.greenCriticalChance)
                 {
                     rb.AddForce(-transform.forward * 300);
@@ -320,14 +320,24 @@ public class EnemyAI : MonoBehaviour
                 }
                 onceTime = true;
             }
+            if (skillDamageType._skillType == SkillDamageType.SkillType.GroundSlash && !onceTime)
+            {
+
+                rb.AddForce(-transform.forward * 300);
+                TakeDamage(SkillDamageManager._instance.groundSlash);
+                DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                indicator.SetDamageText(SkillDamageManager._instance.groundSlash);
+
+                onceTime = true;
+            }
         }
-        
+
     }
     private void OnTriggerExit(Collider other)
     {
-      if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash || skillDamageType._skillType == SkillDamageType.SkillType.UltiSlash)
-          onceTime = false;
-        
+        if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash || skillDamageType._skillType == SkillDamageType.SkillType.UltiSlash)
+            onceTime = false;
+
     }
 
     private void OnDrawGizmosSelected()

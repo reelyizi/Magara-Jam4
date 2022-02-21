@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 1708339021}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a3329f0fe80684bbba09263c9e5096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 10
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   groundEffectPosition: {fileID: 2658418425861449448}
   nearGroundEffectPosition: {fileID: 1848561442115223265}
   rightHandEffectPosition: {fileID: 2658418426666262720}
-  leftHandEffectPosition: {fileID: 2658418425658838518}
+  leftHandEffectPosition: {fileID: 202183688223509884}
   head: {fileID: 2658418427137327994}
   middleFrontCharacter: {fileID: 2658418426031369407}
   rotationalLeftMiddleFrontCharacter: {fileID: 644335082}
@@ -2889,6 +2889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Odd long axe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8993680653133168223, guid: cfd68a528a6e48743856e873f4f46e6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd68a528a6e48743856e873f4f46e6a, type: 3}
 --- !u!4 &4388567692686446524 stripped
@@ -2962,6 +2966,10 @@ PrefabInstance:
     - target: {fileID: 8993680653133168223, guid: cfd68a528a6e48743856e873f4f46e6a, type: 3}
       propertyPath: m_Name
       value: Odd long axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993680653133168223, guid: cfd68a528a6e48743856e873f4f46e6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd68a528a6e48743856e873f4f46e6a, type: 3}

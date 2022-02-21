@@ -26,9 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController characterController;
     #endregion
-
+    float yT = 0;
     void Start()
     {
+        yT = transform.position.y;
         characterController = GetComponent<CharacterController>();
     }
 
@@ -57,14 +58,15 @@ public class PlayerMovement : MonoBehaviour
                     target = Vector3.zero;
                     offset = Vector3.zero;
                     moveDirection = Vector3.zero;
+                    Debug.Log(hit.point);
                 }
                 else
                 {
-                    
+                    Debug.Log(hit.collider.gameObject.name);
                     target = hit.point;
 
                     offset = target - transform.position;
-                    moveDirection = new Vector3((float)target.x - transform.position.x, 0, (float)target.z - transform.position.z).normalized;
+                    moveDirection = new Vector3((float)target.x - transform.position.x, yT, (float)target.z - transform.position.z).normalized;
                 }
             }
         }
@@ -78,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
             Walk();
 
             characterController.Move((moveDirection * moveSpeed) * Time.deltaTime);
-            transform.position = transform.position - (Vector3.up * transform.position.y);
+            //transform.position = transform.position - (Vector3.up * transform.position.y);
             offset = target - transform.position;
         }
         // Idle
