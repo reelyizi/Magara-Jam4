@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,27 +44,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public Image healthBar;
     public int playerHealth = 300;
-    private int totalHealth;
     public int PlayerHealth
     {
         get { return playerHealth; }
-        set 
-        { 
-            playerHealth += value;
-            healthBar.fillAmount = 1 - (((float)totalHealth - (float)playerHealth) / (float)totalHealth);
-        }
+        set { playerHealth += value; }
     }
 
     [SerializeField] private int nextLevelXP = 100;
     public int attributePoints = 0;
-
-    private void Start()
-    {
-        totalHealth = playerHealth;
-    }
 
     void Update()
     {
