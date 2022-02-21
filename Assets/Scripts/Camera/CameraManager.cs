@@ -31,9 +31,14 @@ public class CameraManager : MonoBehaviour
             GenerateShake();
     }
 
+    private void FixedUpdate()
+    {
+        Camera.main.transform.LookAt(target);
+    }
+
     private void CameraFollow()
     {
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.position + offset, smoothness * Time.deltaTime);
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target.position + offset, smoothness * Time.deltaTime);        
     }
 
     private void GenerateShake()
