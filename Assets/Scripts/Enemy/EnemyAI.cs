@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float health,maxHealth;
+    public int health,maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
@@ -61,13 +61,13 @@ public class EnemyAI : MonoBehaviour
 
 
             CheckVisible();
-            if (playerInSightRange && !playerInAttackRange && health > 0)
+            if (playerInSightRange && !playerInAttackRange)
             {
                 //Move
                 ChasePlayer();
                 CheckOtherEnemy();
             }
-            if (playerInAttackRange && playerInSightRange && health > 0)
+            if (playerInAttackRange && playerInSightRange)
             {
                 //Attack
                 AttackPlayer();
@@ -180,7 +180,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<SkillDamageType>() != null && health>0)
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
             skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
             int i = Random.Range(0, 100);
@@ -254,7 +254,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.GetComponent<SkillDamageType>() != null && health > 0)
+        if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
             if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
             {
