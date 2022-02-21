@@ -164,7 +164,7 @@ public class SkillManager : MonoBehaviour
         else if (skillPositionTypes[index] == SkillPositionType.leftHand)
             effect = Instantiate(skillParticle[index], leftHandEffectPosition.position, leftHandEffectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.rightHand)
-            effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);
+            effect = Instantiate(skillParticle[index], rightHandEffectPosition.position, rightHandEffectPosition.rotation);  
         else if (skillPositionTypes[index] == SkillPositionType.head)
             effect = Instantiate(skillParticle[index], head.position, groundEffectPosition.rotation);
         else if (skillPositionTypes[index] == SkillPositionType.middleFrontCharacter)
@@ -176,7 +176,7 @@ public class SkillManager : MonoBehaviour
         else if (skillPositionTypes[index] == SkillPositionType.nearGroundObject)
             effect = Instantiate(skillParticle[index], nearGroundEffectPosition.position, nearGroundEffectPosition.rotation);
 
-        //Destroy(effect, 5f);
+        Destroy(effect, 5f);
     }
 
     private void GenerateSound(int index)

@@ -548,7 +548,7 @@ MonoBehaviour:
   - {fileID: 1648509489993130, guid: 7a9acc7240c6c8840aa8a7db728cd855, type: 3}
   delay:
   - 0
-  positionType: 05000000
+  positionType: 04000000
   skillEffectTypes: 
 --- !u!1101 &-3044868502089245255
 AnimatorStateTransition:
@@ -1204,7 +1204,7 @@ MonoBehaviour:
   - {fileID: 1683321806259216, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
   delay:
   - 0
-  positionType: 05000000
+  positionType: 04000000
   skillEffectTypes: 
 --- !u!1101 &2465117779317072291
 AnimatorStateTransition:
@@ -1364,7 +1364,7 @@ AnimatorStateMachine:
     m_Position: {x: 270, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 75415661967333891}
-    m_Position: {x: 520, y: 120, z: 0}
+    m_Position: {x: 530, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

@@ -393,19 +393,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4104008504991462, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.134772
+      value: 0.3681926
       objectReference: {fileID: 0}
     - target: {fileID: 4104008504991462, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9908767
+      value: 0.92974955
       objectReference: {fileID: 0}
     - target: {fileID: 4488968717229804, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0565782
+      value: -0.29407617
       objectReference: {fileID: 0}
     - target: {fileID: 4488968717229804, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9983982
+      value: -0.95578206
       objectReference: {fileID: 0}
     - target: {fileID: 4850408420471750, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
       propertyPath: m_RootOrder
@@ -453,11 +453,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 045b587210c20184fb310ffa2b42c67d, type: 3}
---- !u!4 &532471201 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1848561442115223265, guid: 5123ea3b35d60e9408b36537eb510bf9, type: 3}
-  m_PrefabInstance: {fileID: 2658418426102894492}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &676632593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,6 +662,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 958913997959503275, guid: ead23f2848473d345840a3f2271dd51c, type: 3}
   m_PrefabInstance: {fileID: 3933096686792727672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1039860574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202183688223509884, guid: 5123ea3b35d60e9408b36537eb510bf9, type: 3}
+  m_PrefabInstance: {fileID: 2658418426102894492}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1116709516
 GameObject:
@@ -1017,9 +1017,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2658418425985536962, guid: 5123ea3b35d60e9408b36537eb510bf9, type: 3}
-      propertyPath: nearGroundEffectPosition
+      propertyPath: leftHandEffectPosition
       value: 
-      objectReference: {fileID: 532471201}
+      objectReference: {fileID: 1039860574}
     - target: {fileID: 2658418425985536962, guid: 5123ea3b35d60e9408b36537eb510bf9, type: 3}
       propertyPath: skillSlots.Array.data[0]
       value: 
@@ -1145,6 +1145,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 958913997945483813, guid: ead23f2848473d345840a3f2271dd51c, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 022f523dfe889bb4a9636e7c64ccb1f7, type: 3}
+    - target: {fileID: 958913997959503273, guid: ead23f2848473d345840a3f2271dd51c, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: d9ca8bb3f40a96246862e6636f3b6164, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead23f2848473d345840a3f2271dd51c, type: 3}
 --- !u!1 &3933096686792727673 stripped
