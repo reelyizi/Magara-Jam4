@@ -44,6 +44,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int playerHealth = 300;
+    public int PlayerHealth
+    {
+        get { return playerHealth; }
+        set { playerHealth += value; }
+    }
+
     [SerializeField] private int nextLevelXP = 100;
     public int attributePoints = 0;
 
