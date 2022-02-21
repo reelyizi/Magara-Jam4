@@ -18,6 +18,10 @@ public class SkillDamageManager : MonoBehaviour
         }
     }
 
+    public Skill redAttackLevelTwo;
+    public Skill redAttackLevelThree;
+    public GameObject skillSlot;
+
     public int redSlashDamage = 40;
     public int redSlashCriticalChance = 10;
     public int redSlashLevel = 1; 
@@ -27,6 +31,10 @@ public class SkillDamageManager : MonoBehaviour
         get { return redSlashLevel; } 
         set { 
             redSlashLevel += value; 
+            if(redSlashLevel == 2)            
+                skillSlot.GetComponent<SkillSlot>().skillObject = redAttackLevelTwo;
+            else if(redSlashLevel == 3)
+                skillSlot.GetComponent<SkillSlot>().skillObject = redAttackLevelThree;
         } 
     }
 

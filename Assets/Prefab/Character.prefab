@@ -963,6 +963,7 @@ GameObject:
   - component: {fileID: 2658418425985536962}
   - component: {fileID: 2658418425985536963}
   - component: {fileID: 2658418425985537020}
+  - component: {fileID: 1708339021}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1017,6 +1018,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
   VFX: {fileID: 2892982944123834578}
   rotationSpeed: 720
   effectPosition: {fileID: 2658418425212446458}
@@ -1039,9 +1043,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   skillParticle: []
   skillDelay: []
   skillPositionTypes: 
+  skillEffectTypes: 
   effectPosition: {fileID: 2658418425212446459}
   groundEffectPosition: {fileID: 2658418425861449448}
   rightHandEffectPosition: {fileID: 2658418426666262720}
@@ -1076,6 +1082,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058531aa1fd84549a193012d45439fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1708339021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658418425985536966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4935cb229f122a40bd1afd8a5a09951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redAttackLevelTwo: {fileID: 11400000, guid: 62b311edcaed1c64583ddf3eed647342, type: 2}
+  redAttackLevelThree: {fileID: 11400000, guid: c5b3206249651ff44a586787e9da6f7e, type: 2}
+  skillSlot: {fileID: 0}
+  redSlashDamage: 40
+  redSlashCriticalChance: 10
+  redSlashLevel: 1
+  redCrackDamage: 70
+  greenSlashDamage: 20
+  greenCriticalChance: 30
+  fireSlashDamage: 70
+  fireCriticalChance: 5
+  fireCrackDamage: 85
+  ultiDamage: 200
+  phoenixDamage: 150
+  phoenixCriticalChance: 10
 --- !u!1 &2658418426031369406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1605,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2553013242187450984
 Transform:
