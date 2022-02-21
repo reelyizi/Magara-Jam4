@@ -14,6 +14,7 @@ public class SkillDamageType : MonoBehaviour
         FireSkillCrack,
         UltiSlash,
         GreenSlash,
+        Phoenix
     }
     [SerializeField] public SkillType _skillType;
 }

@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public int health,maxHealth;
+    public float health,maxHealth;
     //Patroling
     public Vector3 walkPoint;
     //Attacking
@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
 
     //
     private SkillDamageType skillDamageType;
-    private bool onceTime;
+    private bool onceTime, isDead;
     private void Awake()
     {
         onceTime = false;
@@ -61,13 +61,13 @@ public class EnemyAI : MonoBehaviour
 
 
             CheckVisible();
-            if (playerInSightRange && !playerInAttackRange)
+            if (playerInSightRange && !playerInAttackRange && health > 0)
             {
                 //Move
                 ChasePlayer();
                 CheckOtherEnemy();
             }
-            if (playerInAttackRange && playerInSightRange)
+            if (playerInAttackRange && playerInSightRange && health > 0)
             {
                 //Attack
                 AttackPlayer();
@@ -128,6 +128,7 @@ public class EnemyAI : MonoBehaviour
             {
                 int randomAttack = Random.Range(1, 3);
                 animator.SetTrigger("Attack" + randomAttack);
+                Invoke("CurrentHealth", 0.25f);
             }
 
             ///End of attack code
@@ -135,6 +136,10 @@ public class EnemyAI : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+    }
+    public void CurrentHealth()
+    {
+        GameManager.instance.PlayerHealth = -15;
     }
     private void ResetAttack()
     {
@@ -146,8 +151,9 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
         Invoke("DeActiveOutlineable",0.2f);
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
             DestroyEnemy();
             Destroy(healthUI);
         } 
@@ -249,6 +255,7 @@ public class EnemyAI : MonoBehaviour
 
                 }
                 
+                
             }
         }
     }
@@ -256,10 +263,11 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.GetComponent<SkillDamageType>() != null)
         {
+            int i = Random.Range(0, 100);
             if (skillDamageType._skillType == SkillDamageType.SkillType.GreenSlash && !onceTime)
             {
                 skillDamageType = other.gameObject.GetComponent<SkillDamageType>();
-                int i = Random.Range(0, 100);
+                
                 if (i > SkillDamageManager._instance.greenCriticalChance)
                 {
                     TakeDamage(SkillDamageManager._instance.greenSlashDamage * 2);
@@ -279,6 +287,22 @@ public class EnemyAI : MonoBehaviour
                 TakeDamage(SkillDamageManager._instance.ultiDamage);
                 DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
                 indicator.SetDamageText(SkillDamageManager._instance.ultiDamage);
+                onceTime = true;
+            }
+            if (skillDamageType._skillType == SkillDamageType.SkillType.Phoenix && !onceTime)
+            {
+                if (i > SkillDamageManager._instance.phoenixCriticalChance)
+                {
+                    TakeDamage(SkillDamageManager._instance.phoenixDamage * 2);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.phoenixDamage * 2);
+                }
+                else
+                {
+                    TakeDamage(SkillDamageManager._instance.phoenixDamage);
+                    DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+                    indicator.SetDamageText(SkillDamageManager._instance.phoenixDamage);
+                }
                 onceTime = true;
             }
         }
