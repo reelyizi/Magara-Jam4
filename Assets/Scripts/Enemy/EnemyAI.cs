@@ -29,7 +29,7 @@ public class EnemyAI : MonoBehaviour
 
     //
     private SkillDamageType skillDamageType;
-    private bool onceTime;
+    private bool onceTime, isDead;
     private void Awake()
     {
         onceTime = false;
@@ -146,8 +146,9 @@ public class EnemyAI : MonoBehaviour
         health -= damage;
         this.gameObject.GetComponent<EPOOutline.Outlinable>().enabled=true;
         Invoke("DeActiveOutlineable",0.2f);
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
             DestroyEnemy();
             Destroy(healthUI);
         } 
